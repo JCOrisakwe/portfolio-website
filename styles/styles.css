@@ -14,41 +14,23 @@ body{
     background-color: #222;
 }
 
-#top-header{
-    background-color: #EEA727;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%; /* 100% of viewport */
-    padding: 0 8%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#top-header ul{
-    display: flex;
-}
-
-#side-header{
+header{
     display: flex;
     justify-content: end;
     align-self: start;
-    width: 100%; /* 50% of header */
-    padding-right: 35%;
+    width: 50%;
+    padding-right: 13em;
     position: sticky;
     top: 100px;
     font-family: "Source Serif 4", serif;
 }
 
-#side-header > div{
+header > div{
     height: 100%;
-    max-width: 76%;
+    max-width: 20em;
 }
 
-#side-header h1{
+header h1{
     font-family: "Corben", serif;
     font-weight: 500;
     font-size: 42px;
@@ -59,7 +41,7 @@ body{
 }
 
 
-#side-header h2{
+header h2{
     font-weight: 500;
     text-transform: uppercase;
     font-size: 15px;
@@ -67,29 +49,31 @@ body{
     margin-bottom: 22px;
 }
 
-#side-header p{
+header p{
     font-size: 14.2px;
     color: #ccc;
     margin-bottom: 60px;
 }
 
-#side-nav > ul{
+#header-nav > ul{
     display: flex;
     flex-direction: column;
 }
 
-.side-nav-link{
+#header-nav a{
     display:flex;
     gap: 6px;
     align-items: center;
-    color: #aaa;
-    font-size: 11px;
+    font-family: "Karma", serif;
     text-transform: uppercase;
+    color: #aaa;
+    font-weight: 500;
+    font-size: 12px;
     padding: 12px 0;
     max-width: 50%;
 }
 
-.side-nav-link::before{
+#header-nav a::before{
     content: "";
     display: inline-block;
     width: 26px;
@@ -97,13 +81,13 @@ body{
     transition: width 0.2s;
 }
 
-.side-nav-link:hover:before{
+#header-nav a:hover:before{
     border-bottom: #fff solid 1px;
     width: 52px;
 }
 
-.side-nav-link:hover{
-    font-size: 12px;
+#header-nav a:hover{
+    font-size: 13px;
     color: #fff;
 }
 
@@ -116,3 +100,32 @@ main{
     /* display: none; */
     margin-bottom: 27px;
 }
+
+#top-header > nav > ul{
+    font-size: 12px;
+    font-weight: 700;
+    gap: 13px;
+}
+
+#top-header a{
+    color: #aaaaaa80;
+}
+
+#top-header a:hover{
+    color: #aaaaaa80;
+}
+
+#social-nav > ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+#social-nav li{
+    width: 18px;
+}
+
+#social-nav img{
+    width: 100%;
+}
+
