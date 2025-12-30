@@ -2,24 +2,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #000;
     text-decoration: none;
     list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
     background-color: #222;
+    /* 540.75 */
 }
 
 header{
     display: flex;
     justify-content: end;
     align-self: start;
-    width: 50%;
-    padding-right: 13em;
+    max-width: 50%;
+    padding-right: 15em;
     position: sticky;
     top: 100px;
     font-family: "Source Serif 4", serif;
@@ -33,9 +36,9 @@ header > div{
 header h1{
     font-family: "Corben", serif;
     font-weight: 500;
-    font-size: 42px;
+    font-size: 40px;
     color: white;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     line-height: 47px;
     text-transform: capitalize;
 }
@@ -44,15 +47,15 @@ header h1{
 header h2{
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 14.5px;
     color: #f9f9f9;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 header p{
-    font-size: 14.2px;
+    font-size: 14px;
     color: #ccc;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 
 #header-nav > ul{
@@ -69,7 +72,7 @@ header p{
     color: #aaa;
     font-weight: 500;
     font-size: 12px;
-    padding: 12px 0;
+    padding: 8px 0;
     max-width: 50%;
 }
 
@@ -92,40 +95,96 @@ header p{
 }
 
 main{
-    background-color: #85409D;
     max-width: 50%; /* 50% of body */
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+}
+
+.page-section{
+    padding: 100px 0 0 5.5em;
+    min-height: 100vh;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 31.25em;
+    word-spacing: normal;
 }
 
 .page-section > h3{
-    /* display: none; */
-    margin-bottom: 27px;
+    display: none;
+    font-size: 14px;
+    font-family: "Karma", serif;
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
-#top-header > nav > ul{
-    font-size: 12px;
-    font-weight: 700;
-    gap: 13px;
+#home p{
+    margin-bottom: 10px;
 }
 
-#top-header a{
-    color: #aaaaaa80;
-}
-
-#top-header a:hover{
-    color: #aaaaaa80;
-}
-
-#social-nav > ul{
+#projects{
     display: flex;
-    justify-content: flex-end;
-    gap: 18px;
+    flex-direction: column;
+    gap: 30px;
 }
 
-#social-nav li{
-    width: 18px;
+article{
+    font-size: 10px;
 }
 
-#social-nav img{
-    width: 100%;
+#projects h4, 
+#projects p{
+    font-size: 1.4em;
+    color: #aaa;
 }
 
+#projects h4{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 3.333em;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    transition: gap 0.15s;
+}
+
+#projects article:hover{
+    font-size: calc(10px * 1.02);
+}
+
+#projects article:hover h4, 
+#projects article:hover p{
+    color: #fff;
+    gap: 20px;
+}
+
+.project-arrow{
+    font-size: 0.6em;
+}
+
+#all-projects{
+    color: #aaa;
+    margin-top: 30px;
+    font-size: 13px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    align-self: flex-end;
+    transition: transform 0.2s;
+}
+
+#all-projects span{
+    text-transform: capitalize;
+}
+
+#all-projects-arrow{
+    transition: transform 0.1s;
+}
+
+#all-projects:hover{
+    color: #fff;
+}
+
+#all-projects:hover > #all-projects-arrow{
+    transform: translate(50%);
+}
