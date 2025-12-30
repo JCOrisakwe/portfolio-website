@@ -14,7 +14,6 @@ body{
     display: flex;
     justify-content: center;
     background-color: #222;
-    /* 540.75 */
 }
 
 header{
@@ -165,12 +164,12 @@ article{
 #all-projects{
     color: #aaa;
     margin-top: 30px;
-    font-size: 13px;
+    font-size: 1em;
     display: flex;
     gap: 4px;
     align-items: center;
     align-self: flex-end;
-    transition: transform 0.2s;
+    padding: 5px;
 }
 
 #all-projects span{
@@ -178,13 +177,122 @@ article{
 }
 
 #all-projects-arrow{
-    transition: transform 0.1s;
+    position: relative;
+    left: 0;
+    transition: left 0.3s;
 }
 
 #all-projects:hover{
+    font-size: calc(1em * 1.02);
     color: #fff;
 }
 
 #all-projects:hover > #all-projects-arrow{
-    transform: translate(50%);
+    left: 15px;
+}
+
+#contact-me{
+    font-size: 12.5px;
+    font-family: "Karma", serif;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 400;
+    padding-left: 0;
+    max-width: 100%;
+}
+
+#contact-me > h3{
+    display: block;
+    font-weight: 400;
+    font-size: 12.5px;
+    margin-bottom: 65px;
+    color: #fff;
+}
+
+#contact-me > form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#contact-me label{
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+}
+
+#contact-me label:last-of-type{
+    gap: 2px
+}
+
+#contact-me input, 
+#contact-me textarea{
+    color: #bbb;
+    font-family: "Karma", serif;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffffc0;
+}
+
+#contact-me textarea:focus, 
+#contact-me input:focus{
+    outline: none;
+}
+
+#contact-me textarea:hover, 
+#contact-me input:hover{
+    border-color: #fff;
+}
+
+#contact-me textarea{
+    height: 90px;
+    resize: none;
+    scrollbar-width: thin;
+    scrollbar-color: #f2f2f2 transparent;
+}
+
+#contact-me textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+#contact-me textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#contact-me textarea::-webkit-scrollbar-thumb {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+#contact-me button{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 52px;
+    padding: 5px;
+    border: none;
+    background: none;
+    font-size: 11px;
+    font-family: "Karma", serif;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 400;
+    padding-left: 0;
+}
+
+#contact-me button svg{
+    height: 35px;
+    fill: #f2f2f2;
+    stroke: #222;
+    position: relative;
+    left: 0px;
+    transition: left 0.5s;
+}
+
+#contact-me button:hover{
+    cursor: pointer;
+}
+
+#contact-me button:hover svg{
+    left: 20px;
 }
