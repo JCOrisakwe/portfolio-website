@@ -21,7 +21,8 @@ header{
     justify-content: end;
     align-self: start;
     max-width: 50%;
-    padding-right: 15em;
+    padding-right: 19%;
+    padding-left: 48px;
     position: sticky;
     top: 100px;
     font-family: "Source Serif 4", serif;
@@ -100,12 +101,11 @@ main{
 }
 
 .page-section{
-    padding: 100px 0 0 5.5em;
-    min-height: 100vh;
+    padding: 100px 48px 0 6%;
     color: #aaa;
     font-size: 14px;
     line-height: 1.5;
-    max-width: 31.25em;
+    max-width: 34.5em;
     word-spacing: normal;
 }
 
@@ -127,7 +127,7 @@ main{
 
 #tool-stack > div{
     display: flex;
-    gap: 12px;
+    gap: 13px;
     flex-wrap: wrap;
     font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
