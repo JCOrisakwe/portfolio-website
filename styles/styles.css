@@ -225,14 +225,63 @@ article{
     font-weight: 400;
     padding-left: 0;
     max-width: 100%;
+    margin-bottom: 50px;
 }
 
 #contact-me > h3{
     display: block;
     font-weight: 400;
     font-size: 12.5px;
-    margin-bottom: 65px;
     color: #fff;
+}
+
+.socials-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin: 23px 0;
+}
+
+.socials-container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 30px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    line-height: 0.5;
+    opacity: 0.5;
+}
+
+.socials-container a:hover{
+    opacity: 1;
+    border-color: #fff;
+}
+
+.socials-container svg{
+    margin: 20%;
+    width: 56.25%;
+    height: 56.25%;
+}
+
+.socials-container .icon-fill{
+    fill: #aaa;
+    stroke: none;
+}
+
+.socials-container > a:hover .icon-fill{
+    fill: #fff;
+}
+
+.socials-container .icon-outline{
+    fill: none;
+    stroke: #aaa;
+}
+
+.socials-container > a:hover .icon-outline{
+    stroke: #fff;
 }
 
 #contact-me > form{
@@ -263,6 +312,7 @@ article{
 #contact-me textarea:focus, 
 #contact-me input:focus{
     outline: none;
+    border-color: #fff;
 }
 
 #contact-me textarea:hover, 
@@ -290,7 +340,7 @@ article{
     border-radius: 10px;
 }
 
-#contact-me button{
+.send-button{
     display: flex;
     align-items: center;
     align-self: flex-end;
@@ -305,19 +355,20 @@ article{
     font-weight: 400;
 }
 
-#contact-me button svg{
+.send-button svg{
     height: 35px;
     fill: #f2f2f2;
     stroke: #222;
     position: relative;
     left: 0px;
+    bottom: 1px;
     transition: left 0.5s;
 }
 
-#contact-me button:hover{
+.send-button:hover{
     cursor: pointer;
 }
 
-#contact-me button:hover svg{
+.send-button:hover svg{
     left: 20px;
 }
