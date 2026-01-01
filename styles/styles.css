@@ -11,124 +11,120 @@ html{
 }
 
 body{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
     background-color: #222;
+    padding: 0 48px;
 }
 
 header{
+    grid-row: span 2;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     justify-content: end;
-    align-self: start;
-    max-width: 50%;
-    padding-right: 19%;
-    padding-left: 48px;
-    position: sticky;
-    top: 100px;
+    padding-top: 100px;
     font-family: "Source Serif 4", serif;
 }
 
-header > div{
-    height: 100%;
-    max-width: 20em;
+header > .container{
+    max-width: 20rem;
 }
 
 header h1{
     font-family: "Corben", serif;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
-    margin-bottom: 20px;
-    line-height: 47px;
+    margin-bottom: 1.25rem;
+    line-height: 2.5rem;
     text-transform: capitalize;
 }
 
 
 header h2{
-    font-weight: 500;
     text-transform: uppercase;
-    font-size: 14.5px;
+    font-weight: 500;
+    font-size: 0.9rem;
     color: #f9f9f9;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 header p{
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #ccc;
-    margin-bottom: 45px;
+    margin-bottom: 2.8125rem;
 }
 
 #header-nav > ul{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
 
 #header-nav a{
-    display:flex;
-    gap: 6px;
+    display: flex;
     align-items: center;
+    gap: 0.375rem;
     font-family: "Karma", serif;
     text-transform: uppercase;
     color: #aaa;
     font-weight: 500;
-    font-size: 12px;
-    padding: 8px 0;
-    max-width: 50%;
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
 }
 
 #header-nav a::before{
     content: "";
-    display: inline-block;
-    width: 26px;
+    width: 1.7rem;
     border-bottom: #aaa solid 1px;
     transition: width 0.2s;
 }
 
 #header-nav a:hover:before{
     border-bottom: #fff solid 1px;
-    width: 52px;
+    width: 3.25rem;
 }
 
 #header-nav a:hover{
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: #fff;
 }
 
 main{
-    max-width: 50%; /* 50% of body */
     font-family: "Source Serif 4", serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .page-section{
-    padding: 100px 48px 0 6%;
+    padding-top: 100px;
     color: #aaa;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
     max-width: 34.5em;
-    word-spacing: normal;
 }
 
 .page-section > h3{
     display: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Karma", serif;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 #home p{
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 #tool-stack{
-    padding-left: 20px;
+    /* padding-left: 4%; */
 }
 
-#tool-stack > div{
+#tool-stack > .stack-container{
     display: flex;
-    gap: 13px;
     flex-wrap: wrap;
+    gap: 0.8125em;
     font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
 }
@@ -137,50 +133,50 @@ main{
     border-radius: 3px;
     background-color: #3a3a3a;
     color: #ddd;
-    padding: 8px 18px;
+    padding: 0.5em 1.125em;
     position: relative;
     bottom: 0;
     transition: bottom 0.1s;
 }
 
 .stack-item:hover{
-    bottom: 8px;
+    bottom: 0.5em;
 }
 
 #projects{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 article{
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 #projects h4, 
 #projects p{
-    font-size: 1.4em;
+    font-size: 0.875em;
     color: #aaa;
 }
 
 #projects h4{
     display: flex;
     align-items: center;
-    gap: 7px;
-    font-size: 3.333em;
+    gap: 0.4375rem;
+    font-size: 2.0833125em;
     text-transform: capitalize;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
     transition: gap 0.15s;
 }
 
 #projects article:hover{
-    font-size: calc(10px * 1.02);
+    font-size: calc(1rem * 1.02);
 }
 
 #projects article:hover h4, 
 #projects article:hover p{
     color: #fff;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .project-arrow{
