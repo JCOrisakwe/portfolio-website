@@ -2,6 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background: none;
+    border: none;
+    outline: none;
     text-decoration: none;
     list-style-type: none;
 }
@@ -86,19 +89,18 @@ header p{
     transition: width 0.2s;
 }
 
-#header-nav a:hover:before{
-    border-bottom: #fff solid 1px;
-    width: 3.25rem;
-}
-
 #header-nav a:hover{
     font-size: 0.8125rem;
     color: #fff;
 }
 
+#header-nav a:hover::before{
+    border-color: #fff;
+    width: 3.25rem;
+}
+
 main{
     font-family: "Source Serif 4", serif;
-    font-size: 1rem;
 }
 
 .page-section{
@@ -171,8 +173,8 @@ article{
 #projects h4{
     display: flex;
     align-items: center;
-    gap: 0.4375rem;
-    font-size: 2.0833125em;
+    gap: 0.24em;
+    font-size: 2.08em;
     text-transform: capitalize;
     margin-bottom: 0.5rem;
     transition: gap 0.15s;
@@ -185,7 +187,7 @@ article{
 #projects article:hover h4, 
 #projects article:hover p{
     color: #fff;
-    gap: 1.25rem;
+    gap: 0.68em;
 }
 
 #projects-link-wrapper{
@@ -213,7 +215,7 @@ article{
 }
 
 #projects-link-wrapper > a:hover {
-    font-size: calc(0.8rem * 1.02);
+    font-size: 0.816rem;
     color: #fff;
 }
 
@@ -265,21 +267,21 @@ article{
     height: 100%;
 }
 
-.socials-container .icon-fill{
+.socials-container .filled-icon{
     fill: #aaa;
     stroke: none;
 }
 
-.socials-container > a:hover .icon-fill{
+.socials-container > a:hover .filled-icon{
     fill: #fff;
 }
 
-.socials-container .icon-outline{
+.socials-container .outlined-icon{
     fill: none;
     stroke: #aaa;
 }
 
-.socials-container > a:hover .icon-outline{
+.socials-container > a:hover .outlined-icon{
     stroke: #fff;
 }
 
@@ -303,14 +305,11 @@ article{
 #contact-me textarea{
     color: #bbb;
     font-family: "Karma", serif;
-    background: none;
-    border: none;
     border-bottom: 1px solid #ffffffc0;
 }
 
 #contact-me textarea:focus, 
 #contact-me input:focus{
-    outline: none;
     border-color: #fff;
 }
 
@@ -342,12 +341,9 @@ article{
 .send-button{
     align-self: flex-end;
     display: inline-flex;
-    justify-content: flex-end;
     align-items: center;
     margin-top: 2.25rem;
     padding: 1.75em;
-    border: none;
-    background: none;
     font-size: 0.75rem;
     font-family: "Karma", serif;
     text-transform: uppercase;
@@ -360,7 +356,7 @@ article{
     fill: #f2f2f2;
     stroke: #222;
     position: relative;
-    left: 0px;
+    left: 0;
     transition: left 0.5s;
 }
 
@@ -369,7 +365,7 @@ article{
 }
 
 .send-button:hover svg{
-    left: 1.75rem;
+    left: 2.333em;
 }
 
 footer{
