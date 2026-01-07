@@ -39,7 +39,7 @@ header::after{
 }
 
 h1,
-#intro-paragraph{
+#header__tagline{
     max-width: 20rem;
 }
 
@@ -69,12 +69,12 @@ header p{
     margin-bottom: 2.8125rem;
 }
 
-#header-nav > ul{
+#header__nav> ul{
     display: inline-flex;
     flex-direction: column;
 }
 
-#header-nav a{
+#header__nav a{
     display: flex;
     align-items: center;
     gap: 0.375rem;
@@ -86,19 +86,19 @@ header p{
     padding: 0.5rem 0;
 }
 
-#header-nav a::before{
+#header__nav a::before{
     content: "";
     width: 1.7rem;
     border-bottom: #aaa solid 1px;
     transition: width 0.2s;
 }
 
-#header-nav a:hover{
+#header__nav a:hover{
     font-size: 0.8125rem;
     color: #fff;
 }
 
-#header-nav a:hover::before{
+#header__nav a:hover::before{
     border-color: #fff;
     width: 3.25rem;
 }
@@ -124,11 +124,11 @@ main{
     margin-bottom: 1.5rem;
 }
 
-#home p{
+#about-me p{
     margin-bottom: 1rem;
 }
 
-#tool-stack > .stack-container{
+.technologies__container{
     display: flex;
     flex-wrap: wrap;
     column-gap: 0.7em;
@@ -159,23 +159,22 @@ main{
     gap: 1.875rem;
 }
 
-article{
+#projects > article{
     font-size: 1rem;
     max-width: 29em;
 }
 
-#projects article:hover{
+#projects > article:hover{
     font-size: 1.02rem;
 }
 
-#projects h4, 
-#projects p{
+#project__link > h4, 
+#project__link > p{
     font-size: 0.875em; /* em for hover growth */
     color: #aaa;
-
 }
 
-#projects h4{
+#project__link > h4{
     display: flex;
     align-items: center;
     gap: 0.24em;
@@ -185,50 +184,50 @@ article{
     transition: gap 0.15s;
 }
 
-#projects h4::after{
+#project__link > h4::after{
     content: "\2192";
 }
 
-#projects article:hover h4, 
-#projects article:hover p{
+#project__link:hover > h4, 
+#project__link:hover > p{
     color: #fff;
     gap: 0.68em;
 }
 
-#projects-link-wrapper{
+#projects__more{
     display: flex;
     justify-content: flex-end;
     max-width: 29rem;
     margin-top: 0.625rem;
 }
 
-#projects-link-wrapper > a{
+#projects__more > a{
     color: #aaa;
     font-size: 0.8rem;
     padding: 1.25em;
 }
 
-#projects-link-wrapper > a::first-letter{
+#projects__more > a::first-letter{
     text-transform: uppercase;
 }
 
-#projects-link-wrapper > a::after {
+#projects__more > a::after {
     content: "\2192";
     position: relative;
     left: 0.25em;
     transition: left 0.3s;
 }
 
-#projects-link-wrapper > a:hover {
+#projects__more > a:hover {
     font-size: 0.816rem;
     color: #fff;
 }
 
-#projects-link-wrapper > a:hover::after {
+#projects__more > a:hover::after {
     left: 1em;
 }
 
-#contact-me{
+#contact{
     font-size: 0.78rem;
     font-family: "Karma", serif;
     text-transform: uppercase;
@@ -237,7 +236,7 @@ article{
     max-width: 30.12rem;
 }
 
-#contact-me > h3{
+#contact > h3{
     display: block;
     font-weight: 400;
     font-size: 0.78rem;
@@ -290,60 +289,60 @@ article{
     stroke: #fff;
 }
 
-#contact-me > form{
+#contact > form{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#contact-me label{
+#contact label{
     display: flex;
     gap: 1rem;
     flex-direction: column;
 }
 
-#contact-me label:last-of-type{
+#contact label:last-of-type{
     gap: 0.125rem;
 }
 
-#contact-me input, 
-#contact-me textarea{
+#contact input, 
+#contact textarea{
     color: #bbb;
     font-family: "Karma", serif;
     border-bottom: 1px solid #ffffffc0;
 }
 
-#contact-me textarea:focus, 
-#contact-me input:focus{
+#contact textarea:focus, 
+#contact input:focus{
     border-color: #fff;
 }
 
-#contact-me textarea:hover, 
-#contact-me input:hover{
+#contact textarea:hover, 
+#contact input:hover{
     border-color: #fff;
 }
 
-#contact-me textarea{
+#contact textarea{
     height: 5.625rem;
     resize: none;
     scrollbar-width: thin;
     scrollbar-color: #f2f2f2 transparent;
 }
 
-#contact-me textarea::-webkit-scrollbar {
+#contact textarea::-webkit-scrollbar {
     width: 6px;
 }
 
-#contact-me textarea::-webkit-scrollbar-track {
+#contact textarea::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#contact-me textarea::-webkit-scrollbar-thumb {
+#contact textarea::-webkit-scrollbar-thumb {
     background-color: #f2f2f2;
     border-radius: 10px;
 }
 
-.send-button{
+#contact__send{
     align-self: flex-end;
     display: inline-flex;
     align-items: center;
@@ -356,7 +355,7 @@ article{
     font-weight: 400;
 }
 
-.send-button svg{
+#contact__send svg{
     height: 3em;
     fill: #f2f2f2;
     stroke: #222;
@@ -365,11 +364,11 @@ article{
     transition: left 0.5s;
 }
 
-.send-button:hover{
+#contact__sendn:hover{
     cursor: pointer;
 }
 
-.send-button:hover svg{
+#contact__send:hover svg{
     left: 2.333em;
 }
 
@@ -425,17 +424,39 @@ footer{
         display: block;
         position: static;
         height: fit-content;
+        margin-top: 3.125rem;
     }
 
-    #header-nav > ul{
-    display: none;
+    #header__nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 5rem;
+        width: 100%;
+        padding: 0 48px;
+        background-color: rgba(34, 34, 34, 0.75);
+        backdrop-filter: blur(10px);
+        z-index: 15;
+    }
+
+
+    #header__nav > ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    #header__nav a::before{
+        content: none;
     }
     
     h1,
     .page-section,
     #projects > article,
-    #projects-link-wrapper,
-    #contact-me,
+    #projects__more,
+    #contact,
     footer{
         max-width: none;
         min-height: fit-content;
