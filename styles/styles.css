@@ -39,7 +39,7 @@ header::after{
 }
 
 h1,
-#header__tagline{
+header p{
     max-width: 20rem;
 }
 
@@ -69,12 +69,12 @@ header p{
     margin-bottom: 2.8125rem;
 }
 
-#header__nav> ul{
+header ul{
     display: inline-flex;
     flex-direction: column;
 }
 
-#header__nav a{
+header ul a{
     display: flex;
     align-items: center;
     gap: 0.375rem;
@@ -86,19 +86,19 @@ header p{
     padding: 0.5rem 0;
 }
 
-#header__nav a::before{
+header ul a::before{
     content: "";
     width: 1.7rem;
     border-bottom: #aaa solid 1px;
     transition: width 0.2s;
 }
 
-#header__nav a:hover{
+header ul a:hover{
     font-size: 0.8125rem;
     color: #fff;
 }
 
-#header__nav a:hover::before{
+header ul a:hover::before{
     border-color: #fff;
     width: 3.25rem;
 }
@@ -124,7 +124,7 @@ main{
     margin-bottom: 1.5rem;
 }
 
-#about-me p{
+#about p{
     margin-bottom: 1rem;
 }
 
@@ -137,7 +137,7 @@ main{
     font-weight: 600;
 }
 
-.stack-item{
+.technologies__container > a{
     border-radius: 3px;
     background-color: #3a3a3a;
     color: #ddd;
@@ -147,7 +147,7 @@ main{
     transition: bottom 0.1s;
 }
 
-.stack-item:hover{
+.technologies__container > a:hover{
     bottom: 0.5em;
 }
 
@@ -159,22 +159,22 @@ main{
     gap: 1.875rem;
 }
 
-#projects > article{
+.projects__card{
     font-size: 1rem;
     max-width: 29em;
 }
 
-#projects > article:hover{
+.projects__card:hover{
     font-size: 1.02rem;
 }
 
-#project__link > h4, 
-#project__link > p{
+.projects__card h4, 
+.projects__card p{
     font-size: 0.875em; /* em for hover growth */
     color: #aaa;
 }
 
-#project__link > h4{
+.projects__card h4{
     display: flex;
     align-items: center;
     gap: 0.24em;
@@ -184,46 +184,46 @@ main{
     transition: gap 0.15s;
 }
 
-#project__link > h4::after{
+.projects__card h4::after{
     content: "\2192";
 }
 
-#project__link:hover > h4, 
-#project__link:hover > p{
+.projects__card:hover h4, 
+.projects__card:hover p{
     color: #fff;
     gap: 0.68em;
 }
 
-#projects__more{
+.projects__all{
     display: flex;
     justify-content: flex-end;
     max-width: 29rem;
     margin-top: 0.625rem;
 }
 
-#projects__more > a{
+.projects__all > a{
     color: #aaa;
     font-size: 0.8rem;
     padding: 1.25em;
 }
 
-#projects__more > a::first-letter{
+.projects__all > a::first-letter{
     text-transform: uppercase;
 }
 
-#projects__more > a::after {
+.projects__all > a::after {
     content: "\2192";
     position: relative;
     left: 0.25em;
     transition: left 0.3s;
 }
 
-#projects__more > a:hover {
+.projects__all > a:hover {
     font-size: 0.816rem;
     color: #fff;
 }
 
-#projects__more > a:hover::after {
+.projects__all > a:hover::after {
     left: 1em;
 }
 
@@ -243,7 +243,7 @@ main{
     color: #fff;
 }
 
-.socials-container{
+.social-links{
     font-size: 0.625rem;
     display: flex;
     justify-content: flex-end;
@@ -251,7 +251,7 @@ main{
     margin: 1.5rem 0;
 }
 
-.socials-container a{
+.social-links a{
     width: 3em;
     height: 3em;
     padding: 0.6em;
@@ -261,88 +261,88 @@ main{
     opacity: 0.5;
 }
 
-.socials-container a:hover{
+.social-links a:hover{
     opacity: 1;
     border-color: #fff;
 }
 
-.socials-container svg{
+.social-links svg{
     width: 100%;
     height: 100%;
 }
 
-.socials-container .filled-icon{
+.social-links .filled-icon{
     fill: #aaa;
     stroke: none;
 }
 
-.socials-container > a:hover .filled-icon{
+.social-links > a:hover .filled-icon{
     fill: #fff;
 }
 
-.socials-container .outlined-icon{
+.social-links .outlined-icon{
     fill: none;
     stroke: #aaa;
 }
 
-.socials-container > a:hover .outlined-icon{
+.social-links > a:hover .outlined-icon{
     stroke: #fff;
 }
 
-#contact > form{
+#contact__form{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#contact label{
+#contact__form > label{
     display: flex;
     gap: 1rem;
     flex-direction: column;
 }
 
-#contact label:last-of-type{
+#contact__form > label:last-of-type{
     gap: 0.125rem;
 }
 
-#contact input, 
-#contact textarea{
+#contact__form input, 
+#contact__form textarea{
     color: #bbb;
     font-family: "Karma", serif;
     border-bottom: 1px solid #ffffffc0;
 }
 
-#contact textarea:focus, 
-#contact input:focus{
+#contact__form textarea:focus, 
+#contact_form input:focus{
     border-color: #fff;
 }
 
-#contact textarea:hover, 
-#contact input:hover{
+#contact__form textarea:hover, 
+#contact__form input:hover{
     border-color: #fff;
 }
 
-#contact textarea{
+#contact__form textarea{
     height: 5.625rem;
     resize: none;
     scrollbar-width: thin;
     scrollbar-color: #f2f2f2 transparent;
 }
 
-#contact textarea::-webkit-scrollbar {
+#contact__form textarea::-webkit-scrollbar {
     width: 6px;
 }
 
-#contact textarea::-webkit-scrollbar-track {
+#contact__form textarea::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#contact textarea::-webkit-scrollbar-thumb {
+#contact__form textarea::-webkit-scrollbar-thumb {
     background-color: #f2f2f2;
     border-radius: 10px;
 }
 
-#contact__send{
+#contact__form > button{
     align-self: flex-end;
     display: inline-flex;
     align-items: center;
@@ -355,7 +355,7 @@ main{
     font-weight: 400;
 }
 
-#contact__send svg{
+#contact__form > button > svg{
     height: 3em;
     fill: #f2f2f2;
     stroke: #222;
@@ -364,11 +364,11 @@ main{
     transition: left 0.5s;
 }
 
-#contact__sendn:hover{
+#contact__form > button:hover{
     cursor: pointer;
 }
 
-#contact__send:hover svg{
+#contact__form > button:hover svg{
     left: 2.333em;
 }
 
@@ -385,11 +385,11 @@ footer{
     margin-top: 1.25rem;
 }
 
-#copyright::first-letter{
+footer > span::first-letter{
     font-size: 1.25em;
 }
 
-#back-to-top{
+.back-to-top{
     display: flex;
     flex-direction: column;
     gap: 0.6em;
@@ -398,18 +398,18 @@ footer{
     padding: 1.25em 1.25em 0 1.25em;
 }
 
-#back-to-top > span{
+.back-to-top > span{
     opacity: 0;
     transition: opacity 0.25s;
 }
 
-#back-to-top:hover,
-#back-to-top:hover > span{
+.back-to-top:hover,
+.back-to-top:hover > span{
     opacity: 1;
     color: #fff;
 }
 
-#back-to-top > svg{
+.back-to-top > svg{
     width: 1.8em;
     height: 1.8em;
 }
@@ -454,7 +454,7 @@ footer{
     
     h1,
     .page-section,
-    #projects > article,
+    #projects > project__item,
     #projects__more,
     #contact,
     footer{
