@@ -23,7 +23,7 @@ body{
 }
 
 header{
-    grid-row: span 2;
+    grid-row: -1/1;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -74,6 +74,13 @@ header ul{
     flex-direction: column;
 }
 
+header ul a::before{
+    content: "";
+    width: 1.7rem;
+    border-bottom: #aaa solid 1px;
+    transition: width 0.2s;
+}
+
 header ul a{
     display: flex;
     align-items: center;
@@ -84,13 +91,6 @@ header ul a{
     font-weight: 500;
     font-size: 0.75rem;
     padding: 0.5rem 0;
-}
-
-header ul a::before{
-    content: "";
-    width: 1.7rem;
-    border-bottom: #aaa solid 1px;
-    transition: width 0.2s;
 }
 
 header ul a:hover{
@@ -421,13 +421,17 @@ footer > span::first-letter{
     }
 
     header{
-        display: block;
         position: static;
         height: fit-content;
         margin-top: 3.125rem;
+        justify-content: flex-start;
     }
 
-    #header__nav{
+    header::after{
+        content: none;
+    }
+
+    header nav{
         position: fixed;
         top: 0;
         left: 0;
@@ -436,11 +440,11 @@ footer > span::first-letter{
         padding: 0 48px;
         background-color: rgba(34, 34, 34, 0.75);
         backdrop-filter: blur(10px);
-        z-index: 15;
+        z-index: 1;
     }
 
 
-    #header__nav > ul{
+    header ul{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -448,14 +452,14 @@ footer > span::first-letter{
         height: 100%;
     }
 
-    #header__nav a::before{
+    header ul a::before{
         content: none;
     }
     
     h1,
     .page-section,
-    #projects > project__item,
-    #projects__more,
+    .projects__card,
+    .projects__all,
     #contact,
     footer{
         max-width: none;
