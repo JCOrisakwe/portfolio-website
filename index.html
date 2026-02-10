@@ -9,7 +9,15 @@
     />
 
     <!-- Browser tab icon -->
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="icon" type="image/svg" href="./images/joseph-fill.svg" />
+
+    <!-- Source Sans 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
     <link
@@ -25,22 +33,32 @@
     <title>Joseph Orisakwe</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark" id="top-nav">
-      <a class="navbar-brand" href="#">Joseph Orisakwe</a>
+    <nav
+      class="navbar navbar-expand-md navbar-dark text-uppercase fixed-top"
+      id="top-nav"
+    >
+      <a class="navbar-brand" href="#">
+        <img
+          src="./images/joseph.svg"
+          width="35"
+          height="35"
+          alt=""
+          loading="lazy"
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#nav-links"
-        aria-controls="#nav-links"
+        data-target="#top-nav-links"
+        aria-controls="#top-nav-links"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="nav-links">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="top-nav-links">
+        <ul class="navbar-nav align-items-center">
           <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#">technologies</a>
