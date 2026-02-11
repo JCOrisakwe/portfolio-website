@@ -1,15 +1,38 @@
 body {
   background-color: #222;
+  font-family: "Source Serif 4", serif;
 }
 
 .navbar {
   font-size: 0.75rem;
-  font-weight: 500;
   color: #aaa;
 }
 
 #top-nav {
-  font-family: "Source Sans 3", serif;
+  font-family: "Source Sans 3", sans-serif;
   background-color: #222222bf;
   backdrop-filter: blur(10px);
+}
+
+header {
+  padding-top: 9.625rem;
+  max-width: 21rem;
+}
+
+h1 {
+  font-family: "Corben", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+header h2 {
+  font-size: 0.9rem;
+  color: #f9f9f9;
+  margin-bottom: 1.25rem;
+}
+
+header p {
+  font-size: 0.875rem;
+  color: #ccc;
+  margin-bottom: 2.8125rem;
 }
