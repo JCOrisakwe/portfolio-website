@@ -15,24 +15,55 @@ body {
 }
 
 header {
-  padding-top: 9.625rem;
-  max-width: 21rem;
+  font-size: 0.875rem;
+  color: #ccc;
+  padding-top: 5.8rem;
 }
 
 h1 {
   font-family: "Corben", serif;
   font-size: 2.5rem;
-  margin-bottom: 1.25rem;
 }
 
 header h2 {
   font-size: 0.9rem;
   color: #f9f9f9;
-  margin-bottom: 1.25rem;
 }
 
-header p {
+.page-section {
+  padding-top: 5.8rem;
+  color: #aaa;
   font-size: 0.875rem;
-  color: #ccc;
-  margin-bottom: 2.8125rem;
+}
+
+.page-section h3 {
+  font-family: "Karma", serif;
+  font-size: 0.875rem;
+}
+
+#technologies a {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #3a3a3a;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+#projects article {
+  font-size: 1rem;
+}
+
+#projects h4 {
+  color: #aaa;
+  font-size: 2.08em;
+}
+
+#projects p {
+  font-size: 0.875em;
+  color: #aaa;
+}
+
+#projects > a {
+  color: #aaa;
+  font-size: 0.8rem;
 }

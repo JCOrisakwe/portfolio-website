@@ -35,11 +35,19 @@
       rel="stylesheet"
     />
 
+    <!-- Karma font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
 
@@ -53,63 +61,222 @@
       class="navbar navbar-expand-md navbar-dark text-uppercase fixed-top px-4"
       id="top-nav"
     >
-      <a class="navbar-brand" href="#">
-        <img
-          src="./images/joseph.svg"
-          width="28"
-          height="28"
-          alt=""
-          loading="lazy"
-      /></a>
-      <button
-        class="navbar-toggler border-0"
-        type="button"
-        data-toggle="collapse"
-        data-target="#top-nav-links"
-        aria-controls="#top-nav-links"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="top-nav-links">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">technologies</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
-        </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./images/joseph.svg"
+            width="28"
+            height="28"
+            alt=""
+            loading="lazy"
+        /></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#top-nav-links"
+          aria-controls="top-nav-links"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="top-nav-links">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">technologies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div class="row mx-0">
-      <header class="col-lg-6 px-0">
-        <h1 class="text-capitalize">joseph orisakwe</h1>
-        <h2 class="text-uppercase">full stack developer</h2>
-        <p>
+      <header class="col-lg-6 px-0 mt-5 mt-lg-0">
+        <h1 class="text-white text-capitalize mb-4">joseph orisakwe</h1>
+        <h2 class="text-uppercase mb-4">full stack developer</h2>
+        <p class="mb-5">
           Turning complex ideas into high&hyphen;performance web applications. I
           focus on clean code and lightning-fast user experiences.
         </p>
       </header>
-      <main class="col-lg-6 px-0"></main>
+      <main class="container-fluid col-lg-6 px-0">
+        <section class="page-section" id="about">
+          <h3 class="text-uppercase fw-bold text-white mb-4">about me</h3>
+          <p>
+            I'm a developer passionate about crafting accessible, pixel-perfect
+            user interfaces that blend thoughtful design with robust
+            engineering. My favorite work lies at the intersection of design and
+            development, creating experiences that not only look great but are
+            meticulously built for performance and usability.
+          </p>
+          <p>
+            Currently, I'm a Senior Front-End Engineer at Klaviyo, specializing
+            in accessibility. I contribute to the creation and maintenance of UI
+            components that power Klaviyo's frontend, ensuring our platform
+            meets web accessibility standards and best practices to deliver an
+            inclusive user experience.
+          </p>
+          <p>
+            In the past, I've had the opportunity to develop software across a
+            variety of settings — from advertising agencies and large
+            corporations to start-ups and small digital product studios.
+            Additionally, I also released a comprehensive video course a few
+            years ago, guiding learners through building a web app with the
+            Spotify API.
+          </p>
+          <p>
+            In my spare time, I'm usually climbing, playing tennis, hanging out
+            with my wife and two cats, or running around Hyrule searching for
+            Korok seedsKorok seeds.
+          </p>
+        </section>
+        <section class="page-section" id="technologies">
+          <h3 class="text-uppercase fw-bold text-white mb-4">technologies</h3>
+          <div class="d-sm-flex flex-wrap row-gap-2 column-gap-2">
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >HTML5</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3">CSS3</a>
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Bootstrap 5</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Material UI</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Responsive Design</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >JavaScript</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >React</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3">Vite</a>
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Axios / Fetch</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Node.js</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Express.js</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >RESTful APIs</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >EJS Templating</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Python</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Django</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >MongoDB</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Mongoose ODM</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Passport.js (Auth)</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >JOI Validation</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Helmet.js (Security)</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Cloudinary (Image Upload)</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >MapTiler (Maps)</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Git & Terminal</a
+            >
+            <a href="#" class="d-block mb-2 mb-sm-0 btn rounded-1 px-3"
+              >Render / Heroku</a
+            >
+          </div>
+        </section>
+        <section
+          class="page-section row justify-content-end gy-3 mx-0"
+          id="projects"
+        >
+          <h3 class="col-12 text-uppercase fw-bold text-white mb-5 px-0">
+            projects
+          </h3>
+          <article class="col-12 px-0">
+            <a class="text-decoration-none" href="#">
+              <h4 class="text-capitalize fw-bold mb-3">
+                goated<span class="ms-2">&rarr;</span>
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                odio veniam recusandae assumenda sunt libero ad ut officia
+                doloremque aliquam, aspernatur totam ea numquam quod adipisci
+                animi delectus eius voluptates.
+              </p>
+            </a>
+          </article>
+          <article class="col-12 px-0">
+            <a class="text-decoration-none" href="#">
+              <h4 class="text-capitalize fw-bold mb-3">
+                spotify<span class="ms-2">&rarr;</span>
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                odio veniam recusandae assumenda sunt libero ad ut officia
+                doloremque aliquam, aspernatur totam ea numquam quod adipisci
+                animi delectus eius voluptates.
+              </p>
+            </a>
+          </article>
+          <article class="col-12 px-0">
+            <a class="text-decoration-none" href="#">
+              <h4 class="text-capitalize fw-bold mb-3">
+                instagram<span class="ms-2">&rarr;</span>
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                odio veniam recusandae assumenda sunt libero ad ut officia
+                doloremque aliquam, aspernatur totam ea numquam quod adipisci
+                animi delectus eius voluptates.
+              </p>
+            </a>
+          </article>
+          <a href="#" class="w-auto text-decoration-none p-3"
+            ><span class="text-uppercase">v</span>iew all projects<span
+              class="ms-2"
+              >&rarr;</span
+            ></a
+          >
+        </section>
+      </main>
     </div>
     <footer class="row"></footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
   </body>
