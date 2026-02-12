@@ -1,69 +1,93 @@
+html {
+  font-size: 1rem;
+}
+
+p,
+h2,
+h3,
+a {
+  font-size: 0.92rem;
+  color: #aaa;
+}
+
 body {
   background-color: #222;
   font-family: "Source Serif 4", serif;
-}
-
-.navbar {
-  font-size: 0.75rem;
-  color: #aaa;
 }
 
 #top-nav {
   font-family: "Source Sans 3", sans-serif;
   background-color: #222222bf;
   backdrop-filter: blur(10px);
+  font-size: 0.8rem;
 }
 
-header {
-  font-size: 0.875rem;
-  color: #ccc;
-  padding-top: 5.8rem;
+header,
+.page-section {
+  padding-top: 6rem;
 }
 
 h1 {
   font-family: "Corben", serif;
-  font-size: 2.5rem;
+  font-size: 2.625rem;
 }
 
-header h2 {
-  font-size: 0.9rem;
+h2 {
   color: #f9f9f9;
-}
-
-.page-section {
-  padding-top: 5.8rem;
-  color: #aaa;
-  font-size: 0.875rem;
-}
-
-.page-section h3 {
-  font-family: "Karma", serif;
-  font-size: 0.875rem;
 }
 
 #technologies a {
   font-family: "Source Sans 3", sans-serif;
   background-color: #3a3a3a;
-  font-size: 0.87rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: #ddd;
 }
 
-#projects article {
-  font-size: 1rem;
+#projects article a {
+  font-size: 1.05rem;
 }
 
 #projects h4 {
-  color: #aaa;
-  font-size: 2.08em;
+  font-size: 2em;
 }
 
 #projects p {
   font-size: 0.875em;
-  color: #aaa;
 }
 
-#projects > a {
-  color: #aaa;
-  font-size: 0.8rem;
+#contact * {
+  font-size: 0.82rem;
+  font-family: "Karma", serif;
+  color: #f2f2f2;
+  background: none;
+}
+
+.icon {
+  width: 2.7em;
+  height: 2.7em;
+  border-width: 1.5px !important;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+textarea {
+  height: 6rem;
+  scrollbar-width: thin;
+  scrollbar-color: #f2f2f2 transparent;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border-radius: 10px;
 }
