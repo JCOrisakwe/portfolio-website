@@ -2,6 +2,7 @@ p,
 h2,
 h3,
 a {
+  text-decoration: none;
   font-size: 0.92rem;
   color: #aaa;
 }
@@ -122,4 +123,13 @@ textarea::-webkit-scrollbar-track {
 textarea::-webkit-scrollbar-thumb {
   background-color: #f2f2f2;
   border-radius: 10px;
+}
+footer * {
+  font-size: 0.75rem;
+  color: #aaaaaaa3;
+}
+
+footer svg {
+  width: 1.6em;
+  height: 1.6em;
 }
