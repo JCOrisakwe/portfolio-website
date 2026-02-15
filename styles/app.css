@@ -26,6 +26,7 @@ nav {
 header,
 .page-section {
   padding-top: 7.5rem;
+  overflow: visible;
 }
 
 h1 {
@@ -43,8 +44,8 @@ h3 {
   font-family: "Karma", serif;
 }
 
-header > div:first-of-type {
-  max-width: 21rem !important;
+header > div {
+  width: 26rem !important;
 }
 
 #side-nav {
@@ -58,7 +59,7 @@ header > div:first-of-type {
 
 .nav-indicator {
   width: 3em;
-  transition: 0.2s width;
+  transition: width 0.2s;
 }
 
 .active,
@@ -79,18 +80,30 @@ header > div:first-of-type {
   font-size: 0.92rem;
   font-weight: 600;
   color: #ddd;
+  transition: bottom 0.1s;
 }
 
-#projects article a {
-  font-size: 1.05rem;
+#technologies a:hover {
+  bottom: 0.5em !important;
+  border: 1px solid #fff;
 }
 
 #projects h4 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
-#projects p {
-  font-size: 0.875em;
+#projects a:hover,
+#projects article:hover * {
+  color: #fff;
+  transform: scale(1.01);
+}
+
+.arrow {
+  transition: left 0.15s;
+}
+
+.arrow-link:hover .arrow {
+  left: 0.8rem !important;
 }
 
 #contact * {
@@ -100,10 +113,22 @@ header > div:first-of-type {
   background: none;
 }
 
+#contact input:hover,
+#contact input:focus,
+#contact textarea:hover,
+#contact textarea:focus {
+  border-color: #fff !important;
+}
+
 .icon {
-  width: 2.7em;
-  height: 2.7em;
+  width: 2.3em;
+  height: 2.3em;
+  padding: 0.4em;
   border-width: 1.5px !important;
+}
+
+.icon:hover {
+  opacity: 1 !important;
 }
 
 textarea {
@@ -124,12 +149,27 @@ textarea::-webkit-scrollbar-thumb {
   background-color: #f2f2f2;
   border-radius: 10px;
 }
-footer * {
+
+footer a,
+footer span {
   font-size: 0.75rem;
   color: #aaaaaaa3;
+  transition: opacity 0.25s;
+}
+
+footer a:hover,
+footer a:hover span {
+  opacity: 1 !important;
+  color: #fff;
 }
 
 footer svg {
   width: 1.6em;
   height: 1.6em;
+}
+
+@media (min-width: 992px) {
+  .page-section {
+    width: 30rem;
+  }
 }
