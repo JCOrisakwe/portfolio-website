@@ -354,13 +354,12 @@
               ></a
             >
           </section>
-          <section class="page-section text-uppercase" id="contact">
-            <h3 class="text-uppercase fw-bold text-white m-0 py-4">
-              let's connect
-            </h3>
-            <div
-              class="social-links d-flex justify-content-end column-gap-2 mb-4"
-            >
+          <section
+            class="page-section ps-lg-4 d-flex flex-column gap-4 text-uppercase"
+            id="contact"
+          >
+            <h3 class="fw-bold text-white pt-4">let's connect</h3>
+            <div class="social-links d-flex justify-content-end gap-2">
               <a
                 class="icon d-flex border rounded-circle opacity-50"
                 href="https://x.com/jcorisakwe"
@@ -462,36 +461,39 @@
                 </svg>
               </a>
             </div>
-            <form class="d-flex flex-column row-gap-3" action="">
-              <div class="form-group">
-                <label for="name" class="form-label">name</label>
+            <form class="d-flex flex-column gap-3" action="#">
+              <div class="d-flex flex-column">
+                <label for="contact-name" class="form-label">name</label>
                 <input
-                  type="name"
-                  class="form-control border-0 border-bottom border-white border-opacity-50 rounded-0 shadow-none p-0"
-                  id="email"
+                  type="text"
+                  class="border-0 border-bottom border-white border-opacity-50 p-0"
+                  name="contact_name"
+                  id="contact-name"
                 />
               </div>
-              <div class="form-group">
-                <label for="email" class="form-label">email</label>
+              <div class="d-flex flex-column">
+                <label for="contact-email" class="form-label">email</label>
                 <input
                   type="email"
-                  class="form-control border-0 border-bottom border-white border-opacity-50 rounded-0 shadow-none p-0"
-                  id="email"
+                  class="border-0 border-bottom border-white border-opacity-50 p-0"
+                  name="contact_email"
+                  id="contact-email"
                 />
               </div>
-              <div class="form-group">
-                <label for="message" class="form-label">message</label>
+              <div class="d-flex flex-column">
+                <label for="contact-message" class="form-label">message</label>
                 <textarea
-                  class="form-control border-0 border-bottom border-white border-opacity-50 rounded-0 shadow-none p-0"
-                  id="message"
-                  rows="3"
+                  class="border-0 border-bottom border-white border-opacity-50 p-0"
+                  name="contact-message"
+                  id="contact-message"
+                  rows="4"
                 ></textarea>
               </div>
-              <a
-                class="btn btn-lg arrow-link d-flex align-items-center align-self-end mt-5"
-                href="#"
+              <button
+                class="btn btn-lg arrow-link align-self-end mt-5 text-uppercase"
                 aria-label="send"
-                >send
+              >
+                send
                 <svg
                   class="arrow position-relative start-0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -508,7 +510,7 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-              </a>
+              </button>
             </form>
           </section>
         </main>
