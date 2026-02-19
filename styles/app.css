@@ -78,7 +78,7 @@ header > div {
   font-size: 0.92rem;
   font-weight: 600;
   color: #ddd;
-  transition: bottom 0.1s;
+  transition: bottom 0.3s;
 }
 
 #technologies a:hover {
