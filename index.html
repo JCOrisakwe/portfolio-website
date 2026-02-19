@@ -62,83 +62,45 @@
     data-bs-target="side-nav"
   >
     <nav
-      class="navbar navbar-expand-md d-lg-none navbar-dark text-uppercase fixed-top px-4"
+      class="nav navbar navbar-dark navbar-expand-md d-lg-none text-uppercase fixed-top px-4"
       id="top-nav"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="./images/joseph.svg"
-            width="28"
-            height="28"
-            alt=""
-            loading="lazy"
-        /></a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#top-nav-links"
-          aria-controls="top-nav-links"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+      <a href="#" class="navbar-brand">
+        <img
+          src="./images/joseph.svg"
+          alt="Joseph logo"
+          width="28"
+          height="28"
+          loading="lazy"
+        />
+      </a>
+      <button
+        class="navbar-toggler border-0"
+        data-bs-toggle="collapse"
+        data-bs-target="#top-nav-links"
+        data-toggle="collapse"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="top-nav-links"
+      >
+        <ul
+          class="navbar-nav d-flex align-items-center gap-3 row-gap-1 mb-2 mb-md-0"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-md-end"
-          id="top-nav-links"
-        >
-          <ul
-            class="d-flex column-gap-5 row-gap-3 navbar-nav mb-2 mb-md-0 align-items-center"
-            role="tablist"
-          >
-            <li class="nav-item">
-              <a
-                class="nav-link p-0"
-                aria-current="page"
-                href="#about"
-                data-bs-toggle="list"
-                role="tab"
-                aria-controls="list-home"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link p-0"
-                aria-current="page"
-                href="#technologies"
-                data-bs-toggle="list"
-                role="tab"
-                aria-controls="list-home"
-                >technologies</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link p-0"
-                aria-current="page"
-                href="#projects"
-                data-bs-toggle="list"
-                role="tab"
-                aria-controls="list-home"
-                >projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link p-0"
-                aria-current="page"
-                href="#contact"
-                data-bs-toggle="list"
-                role="tab"
-                aria-controls="list-home"
-                >contact</a
-              >
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+          <li class="nav-item">
+            <a href="#technologies" class="nav-link">technologies</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">contact</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="row mx-0 align-items-start">
@@ -155,7 +117,7 @@
             solutions that perform under pressure.
           </p>
           <div
-            class="d-none d-lg-flex flex-column row-gap-3 text-uppercase"
+            class="nav d-none d-lg-flex flex-column row-gap-3 text-uppercase"
             id="side-nav"
           >
             <a class="d-flex align-items-center gap-2 lh-1" href="#about"

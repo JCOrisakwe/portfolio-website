@@ -13,8 +13,14 @@ body {
   max-width: 80rem;
 }
 
-nav {
+.nav {
   font-size: 0.8rem;
+}
+
+.active,
+.nav a:hover {
+  color: #fff;
+  font-weight: 700;
 }
 
 #top-nav {
@@ -58,12 +64,6 @@ header > div {
 .nav-indicator {
   width: 3em;
   transition: width 0.2s;
-}
-
-.active,
-#side-nav a:hover {
-  color: #fff;
-  font-weight: 700;
 }
 
 .active .nav-indicator,
