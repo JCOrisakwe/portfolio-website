@@ -152,6 +152,7 @@ textarea::-webkit-scrollbar-thumb {
 footer a,
 footer span {
   font-size: 0.75rem;
+  font-family: "Karma", serif;
   color: #aaaaaaa3;
   transition: opacity 0.25s;
 }
