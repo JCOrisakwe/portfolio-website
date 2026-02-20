@@ -42,7 +42,11 @@ header,
 }
 
 header > div {
-  width: 26rem !important;
+  width: 29rem;
+}
+
+header p {
+  max-width: 20.5rem;
 }
 
 /* ── Headings ──────────────────────────────────────────────── */
