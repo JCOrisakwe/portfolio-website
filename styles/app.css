@@ -1,39 +1,51 @@
-p,
-h2,
-h3,
-a {
-  text-decoration: none;
-  font-size: 0.92rem;
-  color: #aaa;
-}
+/* ── Base ──────────────────────────────────────────────────── */
 
 body {
   background-color: #222;
-  font-family: "Source Serif 4", serif;
   max-width: 80rem;
 }
 
-.nav {
-  font-size: 0.8rem;
+a {
+  color: #aaa;
+  text-decoration: none;
 }
 
+/* ── Active & Hover States ─────────────────────────────────── */
+
 .active,
-.nav a:hover {
+#side-nav a:hover {
   color: #fff;
   font-weight: 700;
 }
+
+.nav-link:hover {
+  color: #aaa !important;
+}
+
+/* ── Top Navigation ────────────────────────────────────────── */
 
 #top-nav {
   font-family: "Source Sans 3", sans-serif;
   background-color: #222222bf;
   backdrop-filter: blur(10px);
+  font-size: 0.78rem;
 }
+
+/* ── Header & Page Sections ────────────────────────────────── */
 
 header,
 .page-section {
+  font-family: "Source Serif 4", serif;
+  color: #aaa;
+  font-size: 0.92rem;
   padding-top: 7.5rem;
-  overflow: visible;
 }
+
+header > div {
+  width: 26rem !important;
+}
+
+/* ── Headings ──────────────────────────────────────────────── */
 
 h1 {
   font-family: "Corben", serif;
@@ -42,23 +54,20 @@ h1 {
 
 h2 {
   color: #f9f9f9;
+  font-size: 0.92rem;
 }
 
 h3 {
   font-family: "Karma", serif;
+  font-size: 0.92rem;
 }
 
-header > div {
-  width: 26rem !important;
-}
+/* ── Side Navigation ───────────────────────────────────────── */
 
 #side-nav {
-  background-color: #222;
-}
-
-#side-nav a {
   font-family: "Karma", serif;
-  font-size: 0.8rem;
+  width: fit-content;
+  font-size: 0.75rem;
 }
 
 .nav-indicator {
@@ -68,9 +77,11 @@ header > div {
 
 .active .nav-indicator,
 #side-nav a:hover .nav-indicator {
-  border: #fff;
+  border-color: #fff !important;
   width: 6em;
 }
+
+/* ── Technologies ──────────────────────────────────────────── */
 
 #technologies a {
   font-family: "Source Sans 3", sans-serif;
@@ -86,12 +97,13 @@ header > div {
   border: 1px solid #fff;
 }
 
+/* ── Projects ──────────────────────────────────────────────── */
+
 #projects h4 {
   font-size: 2rem;
 }
 
-#projects a:hover,
-#projects article:hover * {
+#projects a:hover {
   color: #fff;
   transform: scale(1.01);
 }
@@ -103,6 +115,8 @@ header > div {
 .arrow-link:hover .arrow {
   left: 0.8rem !important;
 }
+
+/* ── Contact ───────────────────────────────────────────────── */
 
 #contact * {
   font-size: 0.82rem;
@@ -119,6 +133,8 @@ header > div {
   border-color: #fff !important;
 }
 
+/* ── Icons ─────────────────────────────────────────────────── */
+
 .icon {
   width: 2.3em;
   height: 2.3em;
@@ -129,6 +145,8 @@ header > div {
 .icon:hover {
   opacity: 1 !important;
 }
+
+/* ── Textarea & Scrollbar ──────────────────────────────────── */
 
 textarea {
   min-height: 6rem;
@@ -149,8 +167,9 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-footer a,
-footer span {
+/* ── Footer ────────────────────────────────────────────────── */
+
+footer {
   font-size: 0.75rem;
   font-family: "Karma", serif;
   color: #aaaaaaa3;
@@ -163,10 +182,7 @@ footer a:hover span {
   color: #fff;
 }
 
-footer svg {
-  width: 1.6em;
-  height: 1.6em;
-}
+/* ── Responsive ────────────────────────────────────────────── */
 
 @media (min-width: 992px) {
   .page-section {
