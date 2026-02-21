@@ -122,7 +122,11 @@ h3 {
 
 /* ── Contact ───────────────────────────────────────────────── */
 
-#contact * {
+#contact h3,
+#contact label,
+#contact input,
+#contact textarea,
+#contact button {
   font-size: 0.82rem;
   font-family: "Karma", serif;
   color: #f2f2f2;
@@ -137,17 +141,26 @@ h3 {
   border-color: #fff !important;
 }
 
+#contact .fa-paper-plane {
+  transition: left 0.25s;
+}
+
+#contact button:hover .fa-paper-plane {
+  left: 1rem !important;
+}
+
 /* ── Icons ─────────────────────────────────────────────────── */
 
 .icon {
-  width: 2.3em;
-  height: 2.3em;
-  padding: 0.4em;
-  border-width: 1.5px !important;
+  width: 2em;
+  height: 2em;
+  font-size: 1rem;
+  border: 1.8px solid #aaa;
 }
 
 .icon:hover {
   opacity: 1 !important;
+  color: #fff;
 }
 
 /* ── Textarea & Scrollbar ──────────────────────────────────── */
@@ -173,11 +186,12 @@ textarea::-webkit-scrollbar-thumb {
 
 /* ── Footer ────────────────────────────────────────────────── */
 
-footer {
+footer a,
+footer span {
   font-size: 0.75rem;
   font-family: "Karma", serif;
   color: #aaaaaaa3;
-  transition: opacity 0.25s;
+  transition: opacity 0.8s;
 }
 
 footer a:hover,
