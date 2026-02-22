@@ -161,6 +161,7 @@ h3 {
 .icon:hover {
   opacity: 1 !important;
   color: #fff;
+  border-color: #fff;
 }
 
 /* ── Textarea & Scrollbar ──────────────────────────────────── */
