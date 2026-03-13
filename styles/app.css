@@ -4,6 +4,17 @@ body {
   background-color: #222;
   max-width: 84rem;
 }
+.overlay {
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.overlay-visible {
+  width: 100vw;
+}
 
 a {
   color: #aaa;
@@ -22,13 +33,38 @@ a {
   color: #aaa !important;
 }
 
-/* ── Top Navigation ────────────────────────────────────────── */
-
-#top-nav {
-  font-family: "Source Sans 3", sans-serif;
-  background-color: #222222bf;
+/* ── Main Nav ───────────────────────────── */
+#main-nav {
   backdrop-filter: blur(10px);
-  font-size: 0.819rem;
+}
+
+#main-nav__links {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.03rem;
+  color: #aaa;
+  overflow: hidden;
+  background-color: #2f2f2f;
+  transition: width 0.1s ease;
+  width: 0;
+}
+
+#main-nav.no-blur {
+  backdrop-filter: blur(0);
+}
+
+#main-nav__links.drawer-open {
+  width: min(75vw, 400px);
+}
+
+.nav-item a::after {
+  content: "";
+  border-bottom: 1px solid white;
+  transition: width 0.2s ease;
+  width: 0;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
 }
 
 /* ── Header & Page Sections ────────────────────────────────── */
@@ -66,7 +102,7 @@ h3 {
   font-size: 0.966rem;
 }
 
-/* ── Side Navigation ───────────────────────────────────────── */
+/* ── Side Nav ────────────────────────────────────────────────── */
 
 #side-nav {
   font-family: "Karma", serif;
@@ -86,17 +122,16 @@ h3 {
 }
 
 /* ── Technologies ──────────────────────────────────────────── */
-
-#technologies a {
+.technology > a {
   font-family: "Source Sans 3", sans-serif;
-  background-color: #3a3a3a;
+  background-color: #3a3a3a !important;
   font-size: 0.966rem;
   font-weight: 600;
-  color: #ddd;
-  transition: bottom 0.3s;
+  color: #ddd !important;
+  transition: bottom 0.25s;
 }
 
-#technologies a:hover {
+.technology:hover > a {
   bottom: 0.5em !important;
   border: 1px solid #fff;
 }
@@ -206,5 +241,21 @@ footer a:hover span {
 @media (min-width: 992px) {
   .page-section {
     width: 29.925rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #main-nav__links {
+    font-family: "Source Sans 3", sans-serif;
+    text-transform: uppercase !important;
+    font-size: 0.819rem;
+    position: static !important;
+    height: 100% !important;
+    width: fit-content;
+    background: none;
+  }
+
+  .nav-item span {
+    display: none;
   }
 }

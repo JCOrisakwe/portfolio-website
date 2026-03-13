@@ -1,75 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Browser tab icon -->
     <link rel="icon" type="image/svg" href="./images/joseph-fill.svg" />
-
-    <!-- Source Sans 3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- source serif 4 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- corben font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Corben&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Karma font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/e3ba811d50.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/app.css" />
-
     <title>Joseph Orisakwe</title>
   </head>
   <body
     class="container-fluid px-4 px-md-5"
     data-bs-spy="scroll"
-    data-bs-target="side-nav"
+    data-bs-target="#side-nav"
   >
+    <div class="overlay d-md-none z-3"></div>
+
     <nav
-      class="nav navbar navbar-dark navbar-expand-md d-lg-none text-uppercase fixed-top px-4"
-      id="top-nav"
+      class="nav navbar navbar-dark navbar-expand-md justify-content-between d-lg-none text-uppercase fixed-top px-4"
+      id="main-nav"
     >
       <a href="#" class="navbar-brand">
         <img
@@ -81,36 +59,50 @@
         />
       </a>
       <button
-        class="navbar-toggler border-0 shadow-none"
-        data-bs-toggle="collapse"
-        data-bs-target="#top-nav-links"
-        data-toggle="collapse"
+        class="navbar-toggler border-0 shadow-none z-3"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon text-white"></span>
+        <i class="fa-solid fa-bars"></i>
       </button>
       <div
-        class="collapse navbar-collapse justify-content-end"
-        id="top-nav-links"
+        class="position-fixed top-0 end-0 vh-100 text-capitalize"
+        id="main-nav__links"
       >
         <ul
-          class="navbar-nav d-flex align-items-center gap-3 row-gap-1 mb-2 mb-md-0"
+          class="navbar-nav h-100 d-flex flex-column flex-md-row justify-content-center align-items-center gap-4"
         >
-          <li class="nav-item">
-            <a href="#about" class="nav-link text-white">about</a>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <a
+              href="#about"
+              class="d-flex flex-column nav-link text-white p-2 pt-0"
+              >about</a
+            >
           </li>
-          <li class="nav-item">
-            <a href="#technologies" class="nav-link text-white">technologies</a>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <a
+              href="#technologies"
+              class="d-flex flex-column nav-link text-white p-2 pt-0"
+              >technologies</a
+            >
           </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link text-white">projects</a>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <a
+              href="#projects"
+              class="d-flex flex-column nav-link text-white p-2 pt-0"
+              >projects</a
+            >
           </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link text-white">contact</a>
+          <li class="nav-item d-flex flex-column align-items-center">
+            <a
+              href="#contact"
+              class="d-flex flex-column nav-link text-white p-2 pt-0"
+              >contact</a
+            >
           </li>
         </ul>
       </div>
     </nav>
+
     <div class="row mx-0 align-items-start">
       <header
         class="d-flex justify-content-lg-center sticky-lg-top col-lg-6 mt-5 mt-lg-0 px-0"
@@ -126,34 +118,40 @@
             Robust architecture. Seamless design. I&nbsp;build complete digital
             solutions that perform under pressure.
           </p>
+
           <nav
             class="d-none d-lg-flex flex-column text-uppercase"
             id="side-nav"
           >
-            <a class="d-flex align-items-center gap-2 lh-1 pb-2" href="#about"
-              ><div class="nav-indicator border-bottom border-secondary"></div>
-              about</a
-            >
+            <a class="d-flex align-items-center gap-2 lh-1 pb-2" href="#about">
+              <div class="nav-indicator border-bottom border-secondary"></div>
+              about
+            </a>
             <a
               class="d-flex align-items-center gap-2 lh-1 py-2"
               href="#technologies"
-              ><div class="nav-indicator border-bottom border-secondary"></div>
-              technologies</a
             >
+              <div class="nav-indicator border-bottom border-secondary"></div>
+              technologies
+            </a>
             <a
               class="d-flex align-items-center gap-2 lh-1 py-2"
               href="#projects"
-              ><div class="nav-indicator border-bottom border-secondary"></div>
-              projects</a
             >
-            <a class="d-flex align-items-center gap-2 lh-1 py-2" href="#contact"
-              ><div class="nav-indicator border-bottom border-secondary"></div>
-              contact</a
+              <div class="nav-indicator border-bottom border-secondary"></div>
+              projects
+            </a>
+            <a
+              class="d-flex align-items-center gap-2 lh-1 py-2"
+              href="#contact"
             >
+              <div class="nav-indicator border-bottom border-secondary"></div>
+              contact
+            </a>
           </nav>
         </div>
-        <!-- <div class="col-4 px-0"></div> -->
       </header>
+
       <div class="col-lg-6 px-0">
         <main class="d-flex flex-column align-items-lg-center ps-lg-4">
           <section class="page-section" id="about">
@@ -188,6 +186,7 @@
               hic ipsam!
             </p>
           </section>
+
           <section class="page-section" id="technologies">
             <h3 class="d-lg-none text-uppercase fw-bold text-white py-4">
               technologies
@@ -195,80 +194,177 @@
             <div
               class="d-flex flex-column align-items-stretch row-gap-2 flex-sm-row flex-wrap column-gap-2"
             >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >HTML5</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >CSS3</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Bootstrap 5</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Material UI</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Responsive Design</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >JavaScript</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >React</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Vite</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Axios / Fetch</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Node.js</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Express.js</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >RESTful APIs</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >EJS Templating</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Python</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Django</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >MongoDB</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Mongoose ODM</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Passport.js (Auth)</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >JOI Validation</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Helmet.js (Security)</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Cloudinary (Image Upload)</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >MapTiler (Maps)</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Git & Terminal</a
-              >
-              <a href="#" class="position-relative bottom-0 btn rounded-1 px-3"
-                >Render / Heroku</a
-              >
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >HTML5</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >CSS3</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Bootstrap 5</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Material UI</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Responsive Design</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >JavaScript</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >React</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Vite</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Axios / Fetch</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Node.js</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Express.js</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >RESTful APIs</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >EJS Templating</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Python</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Django</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >MongoDB</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Mongoose ODM</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Passport.js (Auth)</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >JOI Validation</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Helmet.js (Security)</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Cloudinary (Image Upload)</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >MapTiler (Maps)</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Git &amp; Terminal</a
+                >
+              </div>
+              <div class="technology">
+                <a
+                  href="#"
+                  class="position-relative bottom-0 btn rounded-1 px-3 w-100"
+                  >Render / Heroku</a
+                >
+              </div>
             </div>
           </section>
+
           <section
             class="page-section d-flex flex-column row-gap-3"
             id="projects"
@@ -323,13 +419,14 @@
                 </p>
               </a>
             </article>
-            <a href="#" class="arrow-link align-self-end p-3 pe-0"
-              >View all projects<span
+            <a href="#" class="arrow-link align-self-end p-3 pe-0">
+              View all projects<span
                 class="arrow position-relative start-0 ps-1"
                 >&rarr;</span
-              ></a
-            >
+              >
+            </a>
           </section>
+
           <section
             class="page-section d-flex flex-column gap-4 text-uppercase"
             id="contact"
@@ -340,32 +437,37 @@
                 class="icon d-flex justify-content-center align-items-center rounded-circle opacity-50"
                 href="https://x.com/jcorisakwe"
                 aria-label="Twitter"
-                ><i class="fa-brands fa-twitter"></i>
-              </a>
+                target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
               <a
                 class="icon d-flex justify-content-center align-items-center rounded-circle opacity-50"
                 href="https://linkedin.com/in/jcorisakwe"
                 aria-label="LinkedIn"
-                ><i class="fa-brands fa-linkedin-in"></i>
-              </a>
+                target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
               <a
                 class="icon d-flex justify-content-center align-items-center rounded-circle opacity-50"
                 href="https://instagram.com/jcorisakwe"
                 aria-label="Instagram"
-                ><i class="fa-brands fa-instagram fa-lg"></i>
-              </a>
+                target="_blank"
+                ><i class="fa-brands fa-instagram fa-lg"></i
+              ></a>
               <a
                 class="icon d-flex justify-content-center align-items-center rounded-circle opacity-50"
                 href="https://github.com/jcorisakwe"
                 aria-label="GitHub"
-                ><i class="fa-brands fa-github fa-lg"></i>
-              </a>
+                target="_blank"
+                ><i class="fa-brands fa-github fa-lg"></i
+              ></a>
               <a
                 class="icon d-flex justify-content-center align-items-center rounded-circle opacity-50"
                 href="mailto:oriz4work@gmail.com"
                 aria-label="Email"
-                ><i class="fa-solid fa-envelope"></i>
-              </a>
+                target="_blank"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
             </div>
             <form class="d-flex flex-column gap-3" action="#">
               <div class="d-flex flex-column">
@@ -396,7 +498,7 @@
                 ></textarea>
               </div>
               <button
-                class="btn btn-lg align-self-end mt-5 text-uppercase pe-0"
+                class="btn btn-lg align-self-end border border-0 text-uppercase mt-5 pe-0"
                 aria-label="send"
               >
                 send
@@ -408,6 +510,7 @@
             </form>
           </section>
         </main>
+
         <footer
           class="d-flex flex-column align-items-center gap-1 text-capitalize mt-5 mb-3"
         >
@@ -423,7 +526,7 @@
         </footer>
       </div>
     </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -434,5 +537,6 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
