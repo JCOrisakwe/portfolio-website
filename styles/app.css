@@ -245,6 +245,7 @@ footer a:hover span {
     height: 100% !important;
     width: fit-content;
     background: none;
+    box-shadow: none;
   }
 
   .nav-item span {
