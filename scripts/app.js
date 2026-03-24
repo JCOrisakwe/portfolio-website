@@ -6,7 +6,6 @@ const isDrawerVisible = () => navDrawer.classList.contains("drawer-open");
 const setDrawerVisibility = function (action = "add") {
   navDrawer.classList[action]("drawer-open");
   backdropOverlay.classList[action]("vh-100");
-  navDrawer.parentElement.classList[action]("no-blur");
   document.body.classList[action]("overflow-hidden");
 };
 
