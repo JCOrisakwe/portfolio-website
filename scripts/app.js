@@ -5,6 +5,7 @@ const navDrawer = document.querySelector("#main-nav__links");
 const isDrawerVisible = () => navDrawer.classList.contains("drawer-open");
 const setDrawerVisibility = function (action = "add") {
   navDrawer.classList[action]("drawer-open");
+  navDrawer.classList[action]("border-start");
   backdropOverlay.classList[action]("vh-100");
   document.body.classList[action]("overflow-hidden");
 };
