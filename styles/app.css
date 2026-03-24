@@ -1,15 +1,56 @@
+/* ── Variables ─────────────────────────────────────────────── */
+
+:root {
+  /* Colors */
+  --color-bg: #09090b;
+  --color-dark: #000;
+  --color-text-primary: #fafafa;
+  --color-text-muted: #9f9fa9;
+
+  /* Typography */
+  --font-sans: "Geist", sans-serif;
+  --font-serif: "Karma", serif;
+  --font-display: "Corben", serif;
+
+  --font-size-base: 1rem;
+  --font-size-sm: 0.95rem;
+  --font-size-xs: 0.86rem;
+  --font-size-xxs: 0.82rem;
+  --font-size-icon: 1.05rem;
+  --font-size-h1: 2.75rem;
+  --font-size-project: 1.6rem;
+
+  /* Spacing */
+  --section-pt: 6.82rem;
+  --header-width: 30.45rem;
+  --header-p-width: 21.52rem;
+  --section-width: 29.92rem;
+
+  /* Transitions */
+  --transition-fast: 0.15s;
+  --transition-base: 0.2s;
+  --transition-slow: 0.25s;
+  --transition-xslow: 0.8s;
+
+  /* Borders */
+  --border-icon: 1.8px solid var(--color-text-muted);
+}
+
 /* ── Base ──────────────────────────────────────────────────── */
 
 body {
-  background-color: #09090b;
+  background-color: var(--color-bg);
+  font-family: var(--font-sans);
   max-width: 84rem;
 }
+
 .overlay {
-  background-color: #00000080;
+  background-color: var(--color-dark);
+  opacity: 0.5;
 }
 
 a {
-  color: #9f9fa9;
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 
@@ -17,12 +58,12 @@ a {
 
 .active,
 #side-nav a:hover {
-  color: #fafafa;
-  font-weight: 700;
+  color: var(--color-text-primary);
+  font-weight: 500;
 }
 
 .nav-link:hover {
-  color: #9f9fa9 !important;
+  color: var(--color-text-muted) !important;
 }
 
 /* ── Main Nav ───────────────────────────── */
@@ -31,13 +72,11 @@ a {
 }
 
 #main-nav__links {
-  font-family: "Source Serif 4", serif;
-  font-size: 1.03rem;
-  color: #9f9fa9;
-  border-left: 0.5px solid #9f9fa956;
-  background-color: #09090b;
-  box-shadow: 0 0 50px black;
-  transition: width 0.1s ease;
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg);
+  box-shadow: 0 0 50px var(--color-dark);
+  transition: width var(--transition-fast) ease;
   width: 0;
 }
 
@@ -47,8 +86,8 @@ a {
 
 .nav-item a::after {
   content: "";
-  border-bottom: 1px solid white;
-  transition: width 0.2s ease;
+  border-bottom: 1px solid var(--color-text-primary);
+  transition: width var(--transition-base) ease;
   width: 0;
 }
 
@@ -60,88 +99,87 @@ a {
 
 header,
 .page-section {
-  font-family: "Geist", sans-serif;
-  color: #9f9fa9;
-  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
   font-weight: 300;
-  padding-top: 6.825rem;
+  padding-top: var(--section-pt);
 }
 
 header > div {
-  width: 30.45rem;
+  width: var(--header-width);
 }
 
 header p {
-  max-width: 21.525rem;
+  max-width: var(--header-p-width);
+  color: var(--color-text-muted);
 }
 
 /* ── Headings ──────────────────────────────────────────────── */
 
 h1 {
-  font-family: "Corben", serif;
-  font-size: 2.75625rem;
+  font-family: var(--font-display);
+  font-size: var(--font-size-h1);
 }
 
-h2 {
-  font-family: "karma", serif;
+h2,
+h3 {
+  font-family: var(--font-serif);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
 }
 
 h3 {
-  font-family: "Karma", serif;
   font-size: 0.966rem;
 }
 
 /* ── Side Nav ────────────────────────────────────────────────── */
 
 #side-nav {
-  font-family: "Karma", serif;
   width: fit-content;
-  font-size: 0.8085rem;
+  font-size: var(--font-size-xxs);
 }
 
 .nav-indicator {
   width: 3em;
-  transition: width 0.2s;
+  transition: width var(--transition-base);
 }
 
 .active .nav-indicator,
 #side-nav a:hover .nav-indicator {
-  border-color: #fafafa !important;
+  border-color: var(--color-text-primary) !important;
   width: 6em;
 }
 
 /* ── Technologies ──────────────────────────────────────────── */
 .technology > div {
-  color: #fafafa;
-  font-family: "Geist", sans-serif;
+  color: var(--color-text-primary);
   font-size: 0.8rem;
   font-weight: 300;
-  border: 1px solid #fafafa;
-  transition: bottom 0.25s;
+  border: 1px solid var(--color-text-primary);
+  transition: bottom var(--transition-slow);
 }
 
 .technology:hover > div {
   bottom: 0.5em !important;
-  background-color: #fafafa;
-  color: #000;
+  background-color: var(--color-text-primary);
+  color: var(--color-dark);
 }
 
 /* ── Projects ──────────────────────────────────────────────── */
 
 #projects h4 {
-  color: #fafafa;
-  font-size: 1.6rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-project);
 }
 
 #projects a:hover {
-  color: #fafafa;
+  color: var(--color-text-primary);
   transform: scale(1.01);
 }
 
 .arrow {
-  transition: left 0.15s;
+  transition: left var(--transition-fast);
 }
 
 .arrow-link:hover .arrow {
@@ -155,11 +193,12 @@ h3 {
 #contact input,
 #contact textarea,
 #contact button {
-  font-size: 0.861rem;
-  font-family: "Karma", serif;
-  color: #f2f2f2;
+  color: var(--color-text-primary);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
   background: none;
-  border-color: #9f9fa9 !important;
+  border-color: var(--color-text-muted) !important;
 }
 
 #contact input:hover,
@@ -167,11 +206,11 @@ h3 {
 #contact textarea:hover,
 #contact textarea:focus {
   outline: none;
-  border-color: #fafafa !important;
+  border-color: var(--color-text-primary) !important;
 }
 
 #contact .fa-paper-plane {
-  transition: left 0.25s;
+  transition: left var(--transition-slow);
 }
 
 #contact button:hover .fa-paper-plane {
@@ -183,14 +222,14 @@ h3 {
 .icon {
   width: 2em;
   height: 2em;
-  font-size: 1.05rem;
-  border: 1.8px solid #9f9fa9;
+  font-size: var(--font-size-icon);
+  border: var(--border-icon);
 }
 
 .icon:hover {
   opacity: 1 !important;
-  color: #fafafa;
-  border-color: #fafafa;
+  color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
 }
 
 /* ── Textarea & Scrollbar ──────────────────────────────────── */
@@ -198,7 +237,7 @@ h3 {
 textarea {
   min-height: 6.3rem;
   scrollbar-width: auto;
-  scrollbar-color: #9f9fa9 transparent;
+  scrollbar-color: var(--color-text-muted) transparent;
 }
 
 textarea::-webkit-scrollbar {
@@ -210,7 +249,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: #9f9fa9;
+  background-color: var(--color-text-muted);
   border-radius: 10px;
 }
 
@@ -219,30 +258,28 @@ textarea::-webkit-scrollbar-thumb {
 footer a,
 footer span {
   font-size: 0.7875rem;
-  font-family: "Karma", serif;
-  color: #9f9f9f;
-  transition: opacity 0.8s;
+  color: var(--color-text-muted);
+  transition: opacity var(--transition-xslow);
 }
 
 footer a:hover,
 footer a:hover span {
   opacity: 1 !important;
-  color: #fafafa;
+  color: var(--color-text-primary);
 }
 
 /* ── Responsive ────────────────────────────────────────────── */
 
 @media (min-width: 992px) {
   .page-section {
-    width: 29.925rem;
+    width: var(--section-width);
   }
 }
 
 @media (min-width: 768px) {
   #main-nav__links {
-    font-family: "Geist", sans-serif;
     text-transform: uppercase !important;
-    font-size: 0.819rem;
+    font-size: var(--font-size-xxs);
     position: static !important;
     height: 100% !important;
     width: fit-content;
