@@ -2,8 +2,7 @@
 
 :root {
   /* Colors */
-  --color-bg: #09090b;
-  --color-dark: #000;
+  --color-dark: #09090b;
   --color-text-primary: #fafafa;
   --color-text-muted: #9f9fa9;
 
@@ -12,13 +11,11 @@
   --font-serif: "Karma", serif;
   --font-display: "Corben", serif;
 
-  --font-size-base: 1rem;
+  --font-size-xl: 2.75rem;
+  --font-size-lg: 1.6rem;
+  --font-size-base: 1.05rem;
   --font-size-sm: 0.95rem;
-  --font-size-xs: 0.86rem;
-  --font-size-xxs: 0.82rem;
-  --font-size-icon: 1.05rem;
-  --font-size-h1: 2.75rem;
-  --font-size-project: 1.6rem;
+  --font-size-xs: 0.82rem;
 
   /* Spacing */
   --section-pt: 6.82rem;
@@ -31,15 +28,13 @@
   --transition-base: 0.2s;
   --transition-slow: 0.25s;
   --transition-xslow: 0.8s;
-
-  /* Borders */
-  --border-icon: 1.8px solid var(--color-text-muted);
+  --ease-default: ease;
 }
 
 /* ── Base ──────────────────────────────────────────────────── */
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-dark);
   font-family: var(--font-sans);
   max-width: 84rem;
 }
@@ -74,9 +69,9 @@ a {
 #main-nav__links {
   font-size: var(--font-size-base);
   color: var(--color-text-muted);
-  background-color: var(--color-bg);
+  background-color: var(--color-dark);
   box-shadow: 0 0 50px var(--color-dark);
-  transition: width var(--transition-fast) ease;
+  transition: width var(--transition-fast) var(--ease-default);
   width: 0;
 }
 
@@ -87,12 +82,16 @@ a {
 .nav-item a::after {
   content: "";
   border-bottom: 1px solid var(--color-text-primary);
-  transition: width var(--transition-base) ease;
+  transition: width var(--transition-base) var(--ease-default);
   width: 0;
 }
 
 .nav-item a:hover::after {
   width: 100%;
+}
+
+.navbar-toggler:hover i {
+  background-color: #222;
 }
 
 /* ── Header & Page Sections ────────────────────────────────── */
@@ -118,7 +117,7 @@ header p {
 
 h1 {
   font-family: var(--font-display);
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-xl);
 }
 
 h2,
@@ -130,14 +129,14 @@ h3 {
 }
 
 h3 {
-  font-size: 0.966rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ── Side Nav ────────────────────────────────────────────────── */
 
 #side-nav {
   width: fit-content;
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
 }
 
 .nav-indicator {
@@ -154,7 +153,7 @@ h3 {
 /* ── Technologies ──────────────────────────────────────────── */
 .technology > div {
   color: var(--color-text-primary);
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
   font-weight: 300;
   border: 1px solid var(--color-text-primary);
   transition: bottom var(--transition-slow);
@@ -170,7 +169,7 @@ h3 {
 
 #projects h4 {
   color: var(--color-text-primary);
-  font-size: var(--font-size-project);
+  font-size: var(--font-size-lg);
 }
 
 #projects a:hover {
@@ -210,7 +209,7 @@ h3 {
 }
 
 #contact .fa-paper-plane {
-  transition: left var(--transition-slow);
+  transition: left var(--transition-slow) var(--ease-default);
 }
 
 #contact button:hover .fa-paper-plane {
@@ -220,10 +219,13 @@ h3 {
 /* ── Icons ─────────────────────────────────────────────────── */
 
 .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2em;
   height: 2em;
-  font-size: var(--font-size-icon);
-  border: var(--border-icon);
+  font-size: var(--font-size-base);
+  border: 1.8px solid var(--color-text-muted);
 }
 
 .icon:hover {
@@ -257,9 +259,9 @@ textarea::-webkit-scrollbar-thumb {
 
 footer a,
 footer span {
-  font-size: 0.7875rem;
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
-  transition: opacity var(--transition-xslow);
+  transition: opacity var(--transition-xslow) var(--ease-default);
 }
 
 footer a:hover,
@@ -279,7 +281,7 @@ footer a:hover span {
 @media (min-width: 768px) {
   #main-nav__links {
     text-transform: uppercase !important;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xs);
     position: static !important;
     height: 100% !important;
     width: fit-content;
