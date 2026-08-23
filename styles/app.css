@@ -18,7 +18,7 @@
   --font-size-xs: 0.82rem;
 
   /* Spacing */
-  --section-pt: 6.82rem;
+  --section-pt: 12rem;
   --header-width: 30.45rem;
   --header-p-width: 21.52rem;
   --section-width: 29.92rem;
@@ -32,6 +32,9 @@
 }
 
 /* ── Base ──────────────────────────────────────────────────── */
+html {
+  font-size: 18px;
+}
 
 body {
   background-color: var(--color-dark);
@@ -49,19 +52,7 @@ a {
   text-decoration: none;
 }
 
-/* ── Active & Hover States ─────────────────────────────────── */
-
-.active,
-#side-nav a:hover {
-  color: var(--color-text-primary);
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: var(--color-text-muted) !important;
-}
-
-/* ── Main Nav ───────────────────────────── */
+/* ── Navigation ───────────────────────────── */
 #main-nav {
   backdrop-filter: blur(10px);
 }
@@ -79,6 +70,11 @@ a {
   width: min(75vw, 400px);
 }
 
+.nav-item a.active,
+.nav-item a:hover {
+  color: var(--color-text-muted) !important;
+}
+
 .nav-item a::after {
   content: "";
   border-bottom: 1px solid var(--color-text-primary);
@@ -86,12 +82,35 @@ a {
   width: 0;
 }
 
+.nav-item a.active::after,
 .nav-item a:hover::after {
   width: 100%;
 }
 
 .navbar-toggler:hover i {
   background-color: #222;
+}
+
+#side-nav {
+  width: fit-content;
+  font-size: var(--font-size-xs);
+}
+
+#side-nav a.active,
+#side-nav a:hover {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.nav-indicator {
+  width: 3em;
+  transition: width var(--transition-base);
+}
+
+.active .nav-indicator,
+#side-nav a:hover .nav-indicator {
+  border-color: var(--color-text-primary) !important;
+  width: 6em;
 }
 
 /* ── Header & Page Sections ────────────────────────────────── */
@@ -130,24 +149,6 @@ h3 {
 
 h3 {
   font-size: var(--font-size-sm);
-}
-
-/* ── Side Nav ────────────────────────────────────────────────── */
-
-#side-nav {
-  width: fit-content;
-  font-size: var(--font-size-xs);
-}
-
-.nav-indicator {
-  width: 3em;
-  transition: width var(--transition-base);
-}
-
-.active .nav-indicator,
-#side-nav a:hover .nav-indicator {
-  border-color: var(--color-text-primary) !important;
-  width: 6em;
 }
 
 /* ── Technologies ──────────────────────────────────────────── */
