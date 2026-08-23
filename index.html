@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" type="image/svg" href="./images/joseph-fill.svg" />
+    <link rel="icon" type="image/svg+xml" href="./images/joseph-fill.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,11 +34,8 @@
     <link rel="stylesheet" href="styles/app.css" />
     <title>Joseph Orisakwe</title>
   </head>
-  <body
-    class="container-fluid px-4 px-md-5"
-    data-bs-spy="scroll"
-    data-bs-target="#side-nav"
-  >
+
+  <body class="container-fluid px-4 px-md-5">
     <div class="overlay fixed-top d-md-none z-3"></div>
 
     <nav
@@ -68,28 +65,34 @@
           class="navbar-nav h-100 d-flex flex-column flex-md-row justify-content-center align-items-center gap-4"
         >
           <li class="nav-item d-flex flex-column align-items-center">
-            <a href="#about" class="d-flex flex-column nav-link text-white p-0"
+            <a
+              href="#about"
+              class="d-flex flex-column text-white p-0"
+              data-link-target="about"
               >about</a
             >
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <a
               href="#technologies"
-              class="d-flex flex-column nav-link text-white p-0"
+              class="d-flex flex-column text-white p-0"
+              data-link-target="technologies"
               >technologies</a
             >
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <a
               href="#projects"
-              class="d-flex flex-column nav-link text-white p-0"
+              class="d-flex flex-column text-white p-0"
+              data-link-target="projects"
               >projects</a
             >
           </li>
           <li class="nav-item d-flex flex-column align-items-center">
             <a
               href="#contact"
-              class="d-flex flex-column nav-link text-white p-0"
+              class="d-flex flex-column text-white p-0"
+              data-link-target="contact"
               >contact</a
             >
           </li>
@@ -117,13 +120,18 @@
             class="d-none d-lg-flex flex-column text-uppercase"
             id="side-nav"
           >
-            <a class="d-flex align-items-center gap-2 lh-1 pb-2" href="#about">
+            <a
+              class="d-flex align-items-center gap-2 lh-1 pb-2"
+              href="#about"
+              data-link-target="about"
+            >
               <div class="nav-indicator border-bottom border-secondary"></div>
               about
             </a>
             <a
               class="d-flex align-items-center gap-2 lh-1 py-2"
               href="#technologies"
+              data-link-target="technologies"
             >
               <div class="nav-indicator border-bottom border-secondary"></div>
               technologies
@@ -131,6 +139,7 @@
             <a
               class="d-flex align-items-center gap-2 lh-1 py-2"
               href="#projects"
+              data-link-target="projects"
             >
               <div class="nav-indicator border-bottom border-secondary"></div>
               projects
@@ -138,6 +147,7 @@
             <a
               class="d-flex align-items-center gap-2 lh-1 py-2"
               href="#contact"
+              data-link-target="contact"
             >
               <div class="nav-indicator border-bottom border-secondary"></div>
               contact
@@ -149,354 +159,200 @@
       <div class="col-lg-6 px-0">
         <main class="d-flex flex-column align-items-lg-center ps-lg-4">
           <section class="page-section" id="about">
-            <h3 class="d-lg-none text-uppercase text-white py-4">about me</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              labore, cum ipsa velit dolorum architecto aspernatur quas
-              molestiae optio quos laudantium laboriosam ipsum temporibus
-              exercitationem, repellat facere recusandae ullam quia? Molestiae
-              autem porro veniam, expedita officiis id non? Ut, aut.
-            </p>
-            <p>
-              Quas minus suscipit consectetur optio qui velit nulla quidem
-              accusamus excepturi dolorem quo, exercitationem, corporis
-              laboriosam molestias error vitae voluptatum voluptates. Officiis,
-              consectetur vero totam necessitatibus eaque odit perspiciatis
-              reiciendis incidunt temporibus doloremque laboriosam, quae facere
-              voluptate expedita minus.
-            </p>
-            <p>
-              Ipsam, corporis? Dolorum molestiae sit excepturi, dignissimos eos
-              explicabo non dicta labore hic eum culpa voluptates esse, vitae
-              nisi ea. Iste deleniti, provident aut animi veritatis tempore at,
-              exercitationem, eius necessitatibus accusamus numquam ullam
-              architecto vitae repellendus
-            </p>
-            <p>
-              Adipisci sunt omnis a deleniti, sapiente incidunt animi aperiam
-              aspernatur vero nihil aliquid qui eveniet natus velit sit sequi
-              hic ipsam!
-            </p>
+            <div>
+              <h3 class="d-lg-none text-uppercase text-white py-4">about me</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                labore, cum ipsa velit dolorum architecto aspernatur quas
+                molestiae optio quos laudantium laboriosam ipsum temporibus
+                exercitationem, repellat facere recusandae ullam quia? Molestiae
+                autem porro veniam, expedita officiis id non? Ut, aut.
+              </p>
+              <p>
+                Quas minus suscipit consectetur optio qui velit nulla quidem
+                accusamus excepturi dolorem quo, exercitationem, corporis
+                laboriosam molestias error vitae voluptatum voluptates.
+                Officiis, consectetur vero totam necessitatibus eaque odit
+                perspiciatis reiciendis incidunt temporibus doloremque
+                laboriosam, quae facere voluptate expedita minus.
+              </p>
+              <p>
+                Ipsam, corporis? Dolorum molestiae sit excepturi, dignissimos
+                eos explicabo non dicta labore hic eum culpa voluptates esse,
+                vitae nisi ea. Iste deleniti, provident aut animi veritatis
+                tempore at, exercitationem, eius necessitatibus accusamus
+                numquam ullam architecto vitae repellendus
+              </p>
+              <p>
+                Adipisci sunt omnis a deleniti, sapiente incidunt animi aperiam
+                aspernatur vero nihil aliquid qui eveniet natus velit sit sequi
+                hic ipsam!
+              </p>
+            </div>
           </section>
 
           <section class="page-section" id="technologies">
-            <h3 class="d-lg-none text-uppercase text-white py-4">
-              technologies
-            </h3>
-            <div
-              class="d-flex flex-column align-items-stretch row-gap-2 flex-sm-row flex-wrap column-gap-2"
-            >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  HTML5
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  CSS3
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Bootstrap 5
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Material UI
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Responsive Design
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  JavaScript
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  React
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Vite
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Axios / Fetch
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Node.js
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Express.js
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  RESTful APIs
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  EJS Templating
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Python
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Django
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  MongoDB
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Mongoose ODM
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Passport.js (Auth)
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  JOI Validation
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Helmet.js (Security)
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Cloudinary (Image Upload)
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  MapTiler (Maps)
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Git &amp; Terminal
-                </div></a
-              >
-              <a class="technology" href="#"
-                ><div
-                  class="position-relative bottom-0 btn rounded-pill px-3 w-100"
-                >
-                  Render / Heroku
-                </div></a
-              >
+            <div>
+              <h3 class="d-lg-none text-uppercase text-white py-4">
+                technologies
+              </h3>
+
+              <template id="technology-template">
+                <a class="technology" href="#">
+                  <div
+                    class="position-relative bottom-0 btn rounded-pill px-3 w-100"
+                  ></div>
+                </a>
+              </template>
+
+              <div
+                id="technology-list"
+                class="d-flex flex-column align-items-stretch row-gap-2 flex-sm-row flex-wrap column-gap-2"
+              ></div>
             </div>
           </section>
 
-          <section
-            class="page-section d-flex flex-column row-gap-3"
-            id="projects"
-          >
-            <h3 class="d-lg-none text-uppercase pt-4">projects</h3>
-            <article>
-              <a class="arrow-link d-flex flex-column gap-2" href="#">
-                <h4 class="text-capitalize fw-bold">
-                  goated<i
-                    class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
-                  ></i>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                  odio veniam recusandae assumenda sunt libero ad ut officia
-                  doloremque aliquam, aspernatur totam ea numquam quod adipisci
-                  animi delectus eius voluptates.
-                </p>
-              </a>
-            </article>
-            <article>
-              <a class="arrow-link d-flex flex-column gap-2" href="#">
-                <h4 class="text-capitalize fw-bold">
-                  malesuada
-                  <i
-                    class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
-                  ></i>
-                </h4>
-                <p>
-                  Pellentesque eget orci ultricies, feugiat elit a, efficitur
-                  tellus. Proin vitae felis ac ex aliquam rhoncus. Phasellus
-                  feugiat augue purus, in hendrerit felis finibus et. Nunc
-                  semper nisi consectetur tincidunt posuere. Nullam sollicitudin
-                  metus non.
-                </p>
-              </a>
-            </article>
-            <article>
-              <a class="arrow-link d-flex flex-column gap-2" href="#">
-                <h4 class="text-capitalize fw-bold">
-                  fringilla<i
-                    class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
-                  ></i>
-                </h4>
-                <p>
-                  Lacus nec metus bibendum egestas iaculis massa nisl malesuada
-                  lacinia integer nunc posuere ut hendrerit semper vel class
-                  aptent taciti sociosqu ad litora torquent per conubia nostra
-                  inceptos himenaeos orci varius natoque penatibus et magnis.
-                </p>
-              </a>
-            </article>
-            <a href="#" class="arrow-link align-self-end p-3 pe-0">
-              View all projects<i
-                class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
-              ></i>
-            </a>
-          </section>
-
-          <section
-            class="page-section d-flex flex-column gap-4 text-uppercase"
-            id="contact"
-          >
-            <h3 class="fw-bold pt-4">let's connect</h3>
-            <div class="social-links d-flex justify-content-end gap-2">
-              <a
-                class="icon rounded-circle opacity-50"
-                href="https://x.com/jcorisakwe"
-                aria-label="Twitter"
-                target="_blank"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-              <a
-                class="icon rounded-circle opacity-50"
-                href="https://linkedin.com/in/jcorisakwe"
-                aria-label="LinkedIn"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-              <a
-                class="icon rounded-circle opacity-50"
-                href="https://instagram.com/jcorisakwe"
-                aria-label="Instagram"
-                target="_blank"
-                ><i class="fa-brands fa-instagram fa-lg"></i
-              ></a>
-              <a
-                class="icon rounded-circle opacity-50"
-                href="https://github.com/jcorisakwe"
-                aria-label="GitHub"
-                target="_blank"
-                ><i class="fa-brands fa-github fa-lg"></i
-              ></a>
-              <a
-                class="icon rounded-circle opacity-50"
-                href="mailto:oriz4work@gmail.com"
-                aria-label="Email"
-                target="_blank"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
-            </div>
-            <form class="d-flex flex-column gap-3" action="#">
-              <div class="d-flex flex-column">
-                <label for="contact-name" class="form-label">name</label>
-                <input
-                  type="text"
-                  class="border-0 border-bottom border-white p-0"
-                  name="contact_name"
-                  id="contact-name"
-                />
-              </div>
-              <div class="d-flex flex-column">
-                <label for="contact-email" class="form-label">email</label>
-                <input
-                  type="email"
-                  class="border-0 border-bottom border-white p-0"
-                  name="contact_email"
-                  id="contact-email"
-                />
-              </div>
-              <div class="d-flex flex-column">
-                <label for="contact-message" class="form-label">message</label>
-                <textarea
-                  class="border-0 border-bottom border-white p-0"
-                  name="contact-message"
-                  id="contact-message"
-                  rows="4"
-                ></textarea>
-              </div>
-              <button
-                class="btn btn-lg align-self-end border border-0 text-uppercase mt-5 pe-0"
-                aria-label="send"
-              >
-                send
-                <i
-                  class="position-relative start-0 fa-solid fa-paper-plane fa-rotate-by fa-xl"
-                  style="--fa-rotate-angle: 45deg"
+          <section class="page-section" id="projects">
+            <div class="d-flex flex-column row-gap-3">
+              <h3 class="d-lg-none text-uppercase pt-4">projects</h3>
+              <article>
+                <a class="arrow-link d-flex flex-column gap-2" href="#">
+                  <h4 class="text-capitalize fw-bold">
+                    goated<i
+                      class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
+                    ></i>
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque odio veniam recusandae assumenda sunt libero ad ut
+                    officia doloremque aliquam, aspernatur totam ea numquam quod
+                    adipisci animi delectus eius voluptates.
+                  </p>
+                </a>
+              </article>
+              <article>
+                <a class="arrow-link d-flex flex-column gap-2" href="#">
+                  <h4 class="text-capitalize fw-bold">
+                    malesuada
+                    <i
+                      class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
+                    ></i>
+                  </h4>
+                  <p>
+                    Pellentesque eget orci ultricies, feugiat elit a, efficitur
+                    tellus. Proin vitae felis ac ex aliquam rhoncus. Phasellus
+                    feugiat augue purus, in hendrerit felis finibus et. Nunc
+                    semper nisi consectetur tincidunt posuere. Nullam
+                    sollicitudin metus non.
+                  </p>
+                </a>
+              </article>
+              <article>
+                <a class="arrow-link d-flex flex-column gap-2" href="#">
+                  <h4 class="text-capitalize fw-bold">
+                    fringilla<i
+                      class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
+                    ></i>
+                  </h4>
+                  <p>
+                    Lacus nec metus bibendum egestas iaculis massa nisl
+                    malesuada lacinia integer nunc posuere ut hendrerit semper
+                    vel class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra inceptos himenaeos orci varius natoque
+                    penatibus et magnis.
+                  </p>
+                </a>
+              </article>
+              <a href="#" class="arrow-link align-self-end p-3 pe-0">
+                View all projects<i
+                  class="arrow position-relative start-0 ps-2 fa-solid fa-arrow-right-long fa-xs"
                 ></i>
-              </button>
-            </form>
+              </a>
+            </div>
+          </section>
+
+          <section class="page-section" id="contact">
+            <div class="d-flex flex-column gap-4 text-uppercase">
+              <h3 class="fw-bold pt-4">let's connect</h3>
+              <div class="social-links d-flex justify-content-end gap-2">
+                <a
+                  class="icon rounded-circle opacity-50"
+                  href="https://x.com/jcorisakwe"
+                  aria-label="Twitter"
+                  target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a
+                  class="icon rounded-circle opacity-50"
+                  href="https://linkedin.com/in/jcorisakwe"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="icon rounded-circle opacity-50"
+                  href="https://instagram.com/jcorisakwe"
+                  aria-label="Instagram"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram fa-lg"></i
+                ></a>
+                <a
+                  class="icon rounded-circle opacity-50"
+                  href="https://github.com/jcorisakwe"
+                  aria-label="GitHub"
+                  target="_blank"
+                  ><i class="fa-brands fa-github fa-lg"></i
+                ></a>
+                <a
+                  class="icon rounded-circle opacity-50"
+                  href="mailto:oriz4work@gmail.com"
+                  aria-label="Email"
+                  target="_blank"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </div>
+              <form class="d-flex flex-column gap-3" action="#">
+                <div class="d-flex flex-column">
+                  <label for="contact-name" class="form-label">name</label>
+                  <input
+                    type="text"
+                    class="border-0 border-bottom border-white p-0"
+                    name="contact_name"
+                    id="contact-name"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="contact-email" class="form-label">email</label>
+                  <input
+                    type="email"
+                    class="border-0 border-bottom border-white p-0"
+                    name="contact_email"
+                    id="contact-email"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="contact-message" class="form-label"
+                    >message</label
+                  >
+                  <textarea
+                    class="border-0 border-bottom border-white p-0"
+                    name="contact-message"
+                    id="contact-message"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <button
+                  class="btn btn-lg align-self-end border border-0 text-uppercase mt-5 pe-0"
+                  aria-label="send"
+                >
+                  send
+                  <i
+                    class="position-relative start-0 fa-solid fa-paper-plane fa-rotate-by fa-xl"
+                    style="--fa-rotate-angle: 45deg"
+                  ></i>
+                </button>
+              </form>
+            </div>
           </section>
         </main>
 
@@ -529,6 +385,6 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/app.js"></script>
+    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>
