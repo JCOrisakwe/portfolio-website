@@ -275,7 +275,7 @@ footer a:hover span {
 
 @media (min-width: 992px) {
   .page-section {
-    width: var(--section-width);
+    width: min(100%, var(--section-width));
   }
 }
 
