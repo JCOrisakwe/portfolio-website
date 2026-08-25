@@ -1,6 +1,6 @@
 /* ── Imports ───────────────────────────────────────────────── */
 
-import { TECHNOLOGIES } from "./technologies-data.js";
+import { TECHNOLOGIES, PROJECTS } from "./content.js";
 
 /* ── Variables ─────────────────────────────────────────────── */
 
@@ -14,10 +14,7 @@ const sections = document.querySelectorAll(".page-section > div");
 /* ── Technology Pills Renderer ─────────────────────────────── */
 
 const renderTechnologies = () => {
-  const container = document.querySelector("#technology-list");
   const template = document.querySelector("#technology-template");
-  if (!container || !template) return;
-
   const fragment = document.createDocumentFragment();
 
   TECHNOLOGIES.forEach(({ name, url = "#" }) => {
@@ -27,10 +24,32 @@ const renderTechnologies = () => {
     fragment.appendChild(node);
   });
 
-  container.appendChild(fragment);
+  document.querySelector("#technology-list").appendChild(fragment);
 };
 
 renderTechnologies();
+
+/* ── Project List Renderer ─────────────────────────────── */
+
+const renderProjects = () => {
+  const template = document.querySelector("#projects-template");
+  const fragment = document.createDocumentFragment();
+
+  PROJECTS.forEach(({ name, description: desc, url = "#" }) => {
+    const node = template.content.cloneNode(true);
+    node.querySelector("a").href = url;
+    node.querySelector("h4").lastElementChild.before(name);
+
+    if (desc.length > 250) desc = desc.slice(0, 250) + "...";
+    node.querySelector("p").textContent = desc;
+
+    fragment.appendChild(node);
+  });
+
+  document.querySelector("#projects > div").lastElementChild.before(fragment);
+};
+
+renderProjects();
 
 /* ── Scrollspy Observer ────────────────────────────────────── */
 
